@@ -24,5 +24,5 @@ The Jupyter notebook system can convert the original notebooks into a variety of
 
 -----
 
-[chnb]: original/index.ipynb
+[chnb]: https://github.com/uidfcba/570a/blob/master/original/index.ipynb
 [chwp]: html/index.html
