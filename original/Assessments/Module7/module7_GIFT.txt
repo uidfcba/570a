@@ -1,0 +1,245 @@
+// question: 0  name: Switch category to $course$/Module 7/570i Mod7 L1
+$CATEGORY: $course$/Module 7/570i Mod7 L1
+
+
+// question: 5976215  name: A Pair Plot can be created using which Python module using the .pairplot method?
+::A Pair Plot can be created using which Python module using the .pairplot method?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">A Pair Plot can be created using which Python module using the .pairplot method?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';"></span> <span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">numpy</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">seaborn</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">matplotlib</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">pandas</span></p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 7/570i Mod7 L4
+$CATEGORY: $course$/Module 7/570i Mod7 L4
+
+
+// question: 5976155  name: For the OLS equation y =            α        +            β        x +       ...
+::For the OLS equation y \=            α        +            β        x +       ...::[html]<p>For the OLS equation y \=   <math xmlns\="http\://www.w3.org/1998/Math/MathML">    <mi>     α    </mi>   </math> +   <math xmlns\="http\://www.w3.org/1998/Math/MathML">    <mi>     β    </mi>   </math> x +   <math xmlns\="http\://www.w3.org/1998/Math/MathML">    <mi>     ε    </mi>   </math> which variable is the independent variable?</p>{
+	~<p>  <math xmlns\="http\://www.w3.org/1998/Math/MathML">   <mi>    ε   </mi>  </math></p>#Incorrect
+	~<p>  <math xmlns\="http\://www.w3.org/1998/Math/MathML">   <mi>    β   </mi>  </math></p>#Incorrect
+	=<p>x</p>#Correct
+	~<p>y</p>#Incorrect
+}
+
+
+// question: 5976158  name: For the OLS equation y =            α        +            β        x +       ...
+::For the OLS equation y \=            α        +            β        x +       ...::[html]<p>For the OLS equation y \=   <math xmlns\="http\://www.w3.org/1998/Math/MathML">    <mi>     α    </mi>   </math> +   <math xmlns\="http\://www.w3.org/1998/Math/MathML">    <mi>     β    </mi>   </math> x +   <math xmlns\="http\://www.w3.org/1998/Math/MathML">    <mi>     ε    </mi>   </math> which variable represents the error?</p>{
+	=<p>  <math xmlns\="http\://www.w3.org/1998/Math/MathML">   <mi>    ε   </mi>  </math></p>#Correct
+	~<p>  <math xmlns\="http\://www.w3.org/1998/Math/MathML">   <mi>    β   </mi>  </math></p>#Incorrect
+	~<p>x</p>#Incorrect
+	~<p>y</p>#Incorrect
+}
+
+
+// question: 5976161  name: For the OLS equation y =            α        +            β        x +       ...
+::For the OLS equation y \=            α        +            β        x +       ...::[html]<p>For the OLS equation y \=   <math xmlns\="http\://www.w3.org/1998/Math/MathML">    <mi>     α    </mi>   </math> +   <math xmlns\="http\://www.w3.org/1998/Math/MathML">    <mi>     β    </mi>   </math> x +   <math xmlns\="http\://www.w3.org/1998/Math/MathML">    <mi>     ε    </mi>   </math> which variable represents the intercept?</p>{
+	~<p>  <math xmlns\="http\://www.w3.org/1998/Math/MathML">    <mi>     ε    </mi>   </math></p>#Incorrect
+	~<p>  <math xmlns\="http\://www.w3.org/1998/Math/MathML">   <mi>    β   </mi>  </math></p>#Incorrect
+	~<p>x</p>#Incorrect
+	~<p>y</p>#Incorrect
+	=<p>  <math xmlns\="http\://www.w3.org/1998/Math/MathML">    <mi>     α    </mi>   </math></p>#Correct
+}
+
+
+// question: 5976152  name: For the OLS equation y =          α      +          β      x +          ε    ...
+::For the OLS equation y \=          α      +          β      x +          ε    ...::[html]<p>For the OLS equation y \=   <math xmlns\="http\://www.w3.org/1998/Math/MathML">   <mi>    α   </mi>  </math> +   <math xmlns\="http\://www.w3.org/1998/Math/MathML">   <mi>    β   </mi>  </math> x +   <math xmlns\="http\://www.w3.org/1998/Math/MathML">   <mi>    ε   </mi>  </math> which variable is the dependent variable?</p>{
+	~<p>  <math xmlns\="http\://www.w3.org/1998/Math/MathML">   <mi>    ε   </mi>  </math></p>#Incorrect
+	~<p>  <math xmlns\="http\://www.w3.org/1998/Math/MathML">   <mi>    β   </mi>  </math></p>#Incorrect
+	~<p>x</p>#Incorrect
+	=<p>y</p>#Correct
+}
+
+
+// question: 0  name: Switch category to $course$/Module 7/570i Mod7 L2
+$CATEGORY: $course$/Module 7/570i Mod7 L2
+
+
+// question: 5976185  name: How do I create a 25 x 25 identity matrix in numpy? I have imported numpy as np.
+::How do I create a 25 x 25 identity matrix in numpy? I have imported numpy as np.::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">How do I create a 25 x 25 identity matrix in numpy? I have imported numpy as np.</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">np.eye(25)</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">np.diag(5,5)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">np.c_identity(25)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">np.eye(5)</span></p>#Incorrect
+}
+
+
+// question: 5976197  name: How do I find the mean of a multi dimensional numpy array called x in Python?
+::How do I find the mean of a multi dimensional numpy array called x in Python?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">How do I find the mean of a multi dimensional numpy array called x in Python?</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">np.mean(x)</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">np.std(x)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">np.get_mean(x)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">np.whatis('mean', x)</span></p>#Incorrect
+}
+
+
+// question: 5976200  name: How do I find the min value of a multi dimensional numpy array called x in ...
+::How do I find the min value of a multi dimensional numpy array called x in ...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">How do I find the min value of a multi dimensional numpy array called x in Python?</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">np.min(x)</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">np.std(x)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">np.get_min(x)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">np.whatis('min', x)</span></p>#Incorrect
+}
+
+
+// question: 5976188  name: I have created a 5x5 numpy multidimensional array called x. How do you access...
+::I have created a 5x5 numpy multidimensional array called x. How do you access...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">I have created a 5x5 numpy multidimensional array called x. How do you access elements in the first row? </span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">x[0]</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">x[\:0]</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">x[0][0]</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">x.get_row(0)</span></p>#Incorrect
+}
+
+
+// question: 5976191  name: I have created a 5x5 numpy multidimensional array called x. How do you access...
+::I have created a 5x5 numpy multidimensional array called x. How do you access...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">I have created a 5x5 numpy multidimensional array called x. How do you access elements in the first column? </span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">x[\:,0]</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">x[0]</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">x[\:0]</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">x.get_col(0)</span></p>#Incorrect
+}
+
+
+// question: 5976194  name: I have created a 5x5 numpy multidimensional array called x. How do you you ...
+::I have created a 5x5 numpy multidimensional array called x. How do you you ...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">I have created a 5x5 numpy multidimensional array called x. How do you you add scalar b to the matrix? </span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">x+b </span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">x[0\:0]+b</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">x.add_all(0)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">x.get_all(b, 'add')</span></p>#Incorrect
+}
+
+
+// question: 5976179  name: I have created a numpy array that has the length of 100 called a. How do I ...
+::I have created a numpy array that has the length of 100 called a. How do I ...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">I have created a numpy array that has the length of 100 called a. How do I reshape a to the shape of a 10 x 10 multi dimensional array?</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">a.reshape(10,10)</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">a.change_shape(10,10)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">a.shape(10,10)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">a.c_shape(10,10)</span></p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 7/570i Mod7 L4
+$CATEGORY: $course$/Module 7/570i Mod7 L4
+
+
+// question: 5976149  name: In the context of OLS, how is error defined?
+::In the context of OLS, how is error defined?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">In the context of OLS, how is error defined?</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">The difference between prediction and reality</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">The number of data points</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">The number of squares</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">The sum of predictions</span></p>#Incorrect
+}
+
+
+// question: 5976146  name: What does OLS try to minimize?
+::What does OLS try to minimize?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">What does OLS try to minimize?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">The sum of errors</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">The sum of squared errors</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">The sum of cubed errors</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">The sum of predictions</span></p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 7/570i Mod7 L2
+$CATEGORY: $course$/Module 7/570i Mod7 L2
+
+
+// question: 5976182  name: What is an identity matrix?
+::What is an identity matrix?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">What is an identity matrix? </span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">A Matrix where the diagonal elements are all 1 and other elements in the matrix are 0</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">A matrix where the diagonal elements are all 0 and other elements in the matrix are 1</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">A Matrix containing eyes</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">A matrix that identifies other matrices</span></p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 7/570i Mod7 L3
+$CATEGORY: $course$/Module 7/570i Mod7 L3
+
+
+// question: 5976170  name: What is Berkson's Paradox?
+::What is Berkson's Paradox?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">What is Berkson's Paradox?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Trends within different groups dissapear when data are combined</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Berkshire Hathaway's relatively poor performance since 1999</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">It looks like there's an association between two independent variables when there really isn't</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Moving something from one group to another increases both averages even though no values actually increase</span></p>#Incorrect
+}
+
+
+// question: 5976164  name: What is Simpson's Paradox?
+::What is Simpson's Paradox?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">What is Simpson's Paradox?</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Trends within different groups dissapear when data are combined</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">The Simpsons keeps getting worse but people keep watching</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">It looks like there's an association between two independent variables when there really isn't</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Moving something from one group to another increases both averages even though no values actually increase</span></p>#Incorrect
+}
+
+
+// question: 5976176  name: What is the Base Rate Fallacy?
+::What is the Base Rate Fallacy?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">What is the Base Rate Fallacy?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Trends within different groups dissapear when data are combined</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Unexpected trends occur just by chance</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">It looks like there's an association between two independent variables when there really isn't</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Disregarding important information when making a judgement of how likely something is</span></p>#Correct
+}
+
+
+// question: 5976173  name: What is the Multiple Comparison Fallacy?
+::What is the Multiple Comparison Fallacy?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">What is the Multiple Comparison Fallacy?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Trends within different groups dissapear when data are combined</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Unexpected trends occur just by chance</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">It looks like there's an association between two independent variables when there really isn't</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Disregarding important information when making a judgement of how likely something is</span></p>#Incorrect
+}
+
+
+// question: 5976167  name: What is Will Rogers Paradox?
+::What is Will Rogers Paradox?::[html]<p>What is Will Rogers Paradox?</p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Trends within different groups dissapear when data are combined</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Too many people named Will have the last name Rogers</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">It looks like there's an association between two independent variables when there really isn't</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Moving something from one group to another increases both averages even though no values actually increase</span></p>#Correct
+}
+
+
+// question: 0  name: Switch category to $course$/Module 7/570i Mod7 L1
+$CATEGORY: $course$/Module 7/570i Mod7 L1
+
+
+// question: 5976209  name: What type of correlation has vertical values that tend to decrease as ...
+::What type of correlation has vertical values that tend to decrease as ...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">What type of correlation has vertical values that tend to decrease as horizontal values increase?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">joint correlation</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">negative correlation</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">positive correlation</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">null correlation</span></p>#Incorrect
+}
+
+
+// question: 5976212  name: What type of correlation has vertical values that tend to increase as ...
+::What type of correlation has vertical values that tend to increase as ...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">What type of correlation has vertical values that tend to increase as horizontal values increase?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">joint correlation</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">negative correlation</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">positive correlation</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">null correlation</span></p>#Incorrect
+}
+
+
+// question: 5976206  name: What type of correlation shows no obvious trend between the two variables ...
+::What type of correlation shows no obvious trend between the two variables ...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">What type of correlation shows no obvious trend between the two variables being plotted?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">joint correlation</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">negative correlation</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">positive correlation</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">null correlation</span></p>#Correct
+}
+
+
+// question: 5976203  name: Which of the below code could be used to create a scatter plot of two sets of...
+::Which of the below code could be used to create a scatter plot of two sets of...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">Which of the below code could be used to create a scatter plot of two sets of data called "x" and "y"?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">scatter.ax(x,y)</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">ax.scatter(x,y)</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">ax.histogram(x,y)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">xy.scatter</span></p>#Incorrect
+}
+
+

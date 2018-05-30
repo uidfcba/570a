@@ -1,0 +1,243 @@
+// question: 0  name: Switch category to $course$/Module 3/570i Mod3 L3
+$CATEGORY: $course$/Module 3/570i Mod3 L3
+
+
+// question: 5976455  name: A file called 'data.p' how do I use pickle to load it into a variable called ...
+::A file called 'data.p' how do I use pickle to load it into a variable called ...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">A file called 'data.p' how do I use pickle to load it into a variable called data?</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">import pickle\\n\\t with open('data.p', 'rb') as f\:\\n\\t data \= pickle.load(f)</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">import pickle\\n\\t with open('data', 'rb') as f\:\\n\\t data \= pickle.load(f)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">import pickle\\n\\t with open('data.p', 'rb') as f\:\\n\\t data \= pickle.load(g)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">import pickle\\n\\t with open('data.p', 'r') as f\:\\n\\t data \= pickle.load(f)</span></p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 3/570i Mod3 L4
+$CATEGORY: $course$/Module 3/570i Mod3 L4
+
+
+// question: 5976422  name: Before using pandas which code must first be run to make the library available?
+::Before using pandas which code must first be run to make the library available?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Before using pandas which code must first be run to make the library available?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">import pd</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">import library pandas</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">import pandas as pd</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">import pandas library</span></p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 3/570i Mod3 L3
+$CATEGORY: $course$/Module 3/570i Mod3 L3
+
+
+// question: 5976440  name: How do what modes do I use to append to a file in binary mode?
+::How do what modes do I use to append to a file in binary mode?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">How do what modes do I use to append to a file in binary mode? </span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">ab</span></p>#Correct
+	~<p>r</p>#Incorrect
+	~<p>rb</p>#Incorrect
+	~<p>x</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 3/570i Mod3 L4
+$CATEGORY: $course$/Module 3/570i Mod3 L4
+
+
+// question: 5976425  name: How do you view the column names of a DataFrame called "df"?
+::How do you view the column names of a DataFrame called "df"?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">How do you view the column names of a DataFrame called "df"?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">df(columns)</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">columns(df)</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">df.columns</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">columns.df</span></p>#Incorrect
+}
+
+
+// question: 5976431  name: How would you view summary statistics of a DataFrame called "df"?
+::How would you view summary statistics of a DataFrame called "df"?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">How would you view summary statistics of a DataFrame called "df"?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">df.summary()</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">df.describe()</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">df.statistics()</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">df.description()</span></p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 3/570i Mod3 L3
+$CATEGORY: $course$/Module 3/570i Mod3 L3
+
+
+// question: 5976452  name: If you want to save data to file which library would you use?
+::If you want to save data to file which library would you use?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">If you want to save data to file which library would you use?</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">pickle</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">seaborn</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">matplotlib</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">scikit-learn</span></p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 3/570i Mod3 L4
+$CATEGORY: $course$/Module 3/570i Mod3 L4
+
+
+// question: 5976419  name: Pandas primarily utilizes which data structures?
+::Pandas primarily utilizes which data structures?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Pandas primarily utilizes which data structures?</span></p>{
+	~%50%<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Series</span></p>
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">List</span></p>
+	~%50%<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">DataFrame</span></p>
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">numpy array</span></p>
+}
+
+
+// question: 5976434  name: What does the "iloc" method of a pandas data frame do?
+::What does the "iloc" method of a pandas data frame do?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">What does the "iloc" method of a pandas data frame do?</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Uses positional index to select a subset of the entire dataframe</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Locks the dataframe so it can't be changed</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Unlocks the dataframe so it can be changed</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Uses explicit labels to select a subset of the entire dataframe</span></p>#Incorrect
+}
+
+
+// question: 5976437  name: What does the "loc" method of a pandas data frame do?
+::What does the "loc" method of a pandas data frame do?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">What does the "loc" method of a pandas data frame do?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Uses positional index to select a subset of the entire dataframe</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Locks the dataframe so it can't be changed</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Unlocks the dataframe so it can be changed</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Uses explicit labels to select a subset of the entire dataframe</span></p>#Correct
+}
+
+
+// question: 5976428  name: What will be the data type of the output of "df['A']" where "df" is a ...
+::What will be the data type of the output of "df['A']" where "df" is a ...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">What will be the data type of the output of "df['A']" where "df" is a DataFrame and 'A' is one of the columns.</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Series</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">DataFrame</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">List</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">numpy array</span></p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 3/570i Mod3 L3
+$CATEGORY: $course$/Module 3/570i Mod3 L3
+
+
+// question: 5976446  name: Which library handles fast numerical arrays and matrices?
+::Which library handles fast numerical arrays and matrices?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which library handles fast numerical arrays and matrices?</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">numpy</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">seaborn</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">matplotlib </span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">csv</span></p>#Incorrect
+}
+
+
+// question: 5976449  name: Which library handles writing and reading to CSV files?
+::Which library handles writing and reading to CSV files?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which library handles writing and reading to CSV files</span>?</p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">numpy</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">seaborn</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">matplotlib </span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">csv</span></p>#Correct
+}
+
+
+// question: 5976443  name: Which one of the following code snippets will write to a file in Python?
+::Which one of the following code snippets will write to a file in Python?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which one of the following code snippets will write to a file in Python? </span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">with open('text.txt', 'w') as f\: f.write('hi')</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">with open('text.txt', 'r') as f\: f.write('hi')</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">with open('text.txt', 'b') as f\: f.write('hi')</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">with open('text.txt', 'w') as f\: f.read('hi')</span></p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 3/570i Mod3 L2
+$CATEGORY: $course$/Module 3/570i Mod3 L2
+
+
+// question: 5976467  name: Which Unix command can be used to change the current working directory to ...
+::Which Unix command can be used to change the current working directory to ...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which Unix command can be used to change the current working directory to "/home"</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">change /home</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">cd /home</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">change directory /home</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">go /home</span></p>#Incorrect
+}
+
+
+// question: 5976473  name: Which Unix command can be used to create a new directory called "new_directory"
+::Which Unix command can be used to create a new directory called "new_directory"::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which Unix command can be used to create a new directory called "new_directory"</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">mkdir new_directory</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">make new_directory</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">touch new_directory</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">create new_directory</span></p>#Incorrect
+}
+
+
+// question: 5976470  name: Which Unix command can be used to create an empty file called "empty_file"
+::Which Unix command can be used to create an empty file called "empty_file"::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which Unix command can be used to create an empty file called "empty_file"</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">create empty_file</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">make empty_file</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">touch empty_file</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">mkdir empty_file</span></p>#Incorrect
+}
+
+
+// question: 5976476  name: Which Unix command can be used to delete a file called "my_file" ?
+::Which Unix command can be used to delete a file called "my_file" ?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which Unix command can be used to delete a file called "my_file" ?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">remove my_file</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">delete my_file</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">rm my_file</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">rmdir my_file</span></p>#Incorrect
+}
+
+
+// question: 5976479  name: Which Unix command can be used to download files from a website?
+::Which Unix command can be used to download files from a website?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which Unix command can be used to download files from a website?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">website download</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">wget</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">websiteget</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">webget</span></p>#Incorrect
+}
+
+
+// question: 5976464  name: Which Unix command can be used to list all files and directories?
+::Which Unix command can be used to list all files and directories?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which Unix command can be used to list all files and directories?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">ls all</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">list -a</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">list all</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">ls -a</span></p>#Correct
+}
+
+
+// question: 5976461  name: Which Unix command can be used to list the contents of a directory?
+::Which Unix command can be used to list the contents of a directory?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which Unix command can be used to list the contents of a directory?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">list_contents</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">ls</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">list</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">content list</span></p>#Incorrect
+}
+
+
+// question: 5976482  name: Which Unix command can be used to view the contents of a file called "my_file" ?
+::Which Unix command can be used to view the contents of a file called "my_file" ?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which Unix command can be used to view the contents of a file called "my_file" ?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">view my_file</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">look my_file</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">cat my_file</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">peep my_file</span></p>#Incorrect
+}
+
+
+// question: 5976485  name: Which Unix command can be used to view the first 3 lines of a file called ...
+::Which Unix command can be used to view the first 3 lines of a file called ...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which Unix command can be used to view the first 3 lines of a file called "my_file" ?</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">head -3 my_file</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">cat my_file 3</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">3 head my_file</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">cat my_file -3</span></p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 3/570i Mod3 L3
+$CATEGORY: $course$/Module 3/570i Mod3 L3
+
+
+// question: 5976458  name: While data persistence is usefule why is not optimal?
+::While data persistence is usefule why is not optimal?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">While data persistence is usefule why is not optimal?</span></p>{
+	~%25%<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">All data is written and read as Python strings. Complex arrangements of heterogenous data thus require potentially complex (and costly in execution time) transformations.</span></p>
+	~%25%<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">All concurrency is provided by the file system, thus we are not guaranteed consistent results if multiple writers work at the same time.</span></p>
+	~%25%<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Without extra effort, for example, to write to a binary file or to employ compression, this approach is costly in terms of storage space.</span></p>
+	~%25%<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">We rely completely on the underlying file system for consistency and durability. Thus, persisted application state may have unintentional dependencies on the underlying file system.</span></p>
+}
+
+
