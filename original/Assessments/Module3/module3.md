@@ -64,7 +64,7 @@ Choices: ...
   - Type: Multiple choice (Single Correct Answer)
   - Choices: import pickle\n\t with open('data.p', 'rb') as f:\n\t data = pickle.load(f); import pickle\n\t with open('data', 'rb') as f:\n\t data = pickle.load(f); import pickle\n\t with open('data.p', 'rb') as f:\n\t data = pickle.load(g); import pickle\n\t with open('data.p', 'r') as f:\n\t data = pickle.load(f)
 - Question: While data persistence is useful, why is it not optimal?
-  - Type:
+  - Type: Multiple choice (Single Correct Answer)
   - Choices: All data is written and read as Python strings. Complex arrangements of heterogenous data thus require potentially complex (and costly in execution time) transformations; All concurrency is provided by the file system, thus we are not guaranteed consistent results if multiple writers work at the same time; Without extra effort, for example, to write to a binary file or to employ compression, this approach is costly in terms of storage space; We rely completely on the underlying file system for consistency and durability. Thus, persisted application state may have unintentional dependencies on the underlying file system.
 # Lesson 4
 
@@ -84,14 +84,14 @@ Choices: ...
     - Type: Multiple Choice (Single Correct Answer)
     - Choices: Series; DataFrame; List; numpy array
 
- - Question: How would you view summary statistics of a DataFrame called "df"?
+- Question: How would you view summary statistics of a DataFrame called "df"?
     - Type: Multiple Choice (Single Correct Answer) or Free Response Programming Question
     - Choices: df.summary(); df.describe(); df.statistics(); df.description()   
 
- - Question: What does the "iloc" method of a pandas data frame do?
+- Question: What does the "iloc" method of a pandas data frame do?
     - Type: Multiple Choice (Single Correct Answer) 
     - Choices: Uses positional index to select a subset of the entire dataframe; Locks the dataframe so it can't be changed; Unlocks the dataframe so it can be changed; Uses explicit labels to select a subset of the entire dataframe 
 
- - Question: What does the "loc" method of a pandas data frame do?
+- Question: What does the "loc" method of a pandas data frame do?
     - Type: Multiple Choice (Single Correct Answer) 
     - Choices: Uses positional index to select a subset of the entire dataframe; Locks the dataframe so it can't be changed; Unlocks the dataframe so it can be changed; Uses explicit labels to select a subset of the entire dataframe 
