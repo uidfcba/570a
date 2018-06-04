@@ -68,7 +68,7 @@ Choices: ...
   - Choices: false, _class_, test, for, class
 
 - Question: Which of following are True?
-  - Type: Multiple Choice (Multiple Correct Answers)
+  - Type: Multiple Choice (Multiple Correct Answers). 
     Choices: The first character must be a letter or an underscore character.; Variable and Function names traditionally start with a lowercase letter.; Classes traditionally start with an upper-case letter.; The identifier cannot be one of the reserved Python keywords, listed in the code block below.
 
 - Question: What is PEP-8?
