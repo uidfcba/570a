@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89604308-2"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-89604308-2');
+  </script>
+
 <title>intro2md</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
@@ -8451,15 +8460,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11242,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11685,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11730,14 +11739,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11880,7 +11889,7 @@ of the line to break.</p>
 <p>Ordered lists are similar, but are prefixed by numbers and a period, for example <code>1.</code> for the first item. The Markdown numbers used to indicate list items do not have to start at one, nor must they be sequential. As an example, the text generated from the following Markdown will be formatted to begin at one and proceed sequentially.</p>
 
 <pre><code>2. Item 1
-4. Item 2  
+4. Item 2
 1. Item 3</code></pre>
 <p>will produce the following list:</p>
 <ol>
@@ -11903,24 +11912,24 @@ of the line to break.</p>
 <p>For longer code blocks, you can enclose the block in three single quote characters ```. For example, the following code block in Markdown:</p>
 
 <pre><code>markdown
-\`\`\`  
-x = 3  
-y = 4  
-z = 5   
+\`\`\`
+x = 3
+y = 4
+z = 5
 
-print("%b" % (x\*\*2 + y\*\*2 = z\*\*2)   
+print("%b" % (x\*\*2 + y\*\*2 = z\*\*2)
 \`\`\`</code></pre>
 <p>will produce the following code block:</p>
 
-<pre><code>x = 3  
-y = 4  
-z = 5   
+<pre><code>x = 3
+y = 4
+z = 5
 
 print("%b" % (x**2 + y**2 = z**2)</code></pre>
 <p>You also can use what is known as Github flavored Markdown to indicate the target program language by adding the language name after the initial three single quote characters. For example, to indicate Python, you would use ```python, while to indicate Javascript, you would use ```javascript. For example, applying this to the previous example produces the syntax-highlighted version:</p>
-<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>  
-<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>  
-<span class="n">z</span> <span class="o">=</span> <span class="mi">5</span>   
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;%b&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">=</span> <span class="n">z</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
@@ -11935,9 +11944,9 @@ print("%b" % (x**2 + y**2 = z**2)</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Quoting-Text">Quoting Text<a class="anchor-link" href="#Quoting-Text">&#182;</a></h2><p>You also can write quoted text by prefixing the line with a greater-than <code>&gt;</code> character. You can also write multi-line block quoted text by prefixing every line with a greater-than <code>&gt;</code> character. For example, the following Markdown:</p>
 
-<pre><code>\&gt; Here is a long line of text  
-\&gt; that we wrapped over multiple lines by inserting a Markdown line break  
-\&gt; that is of course multiple space characters inserted at the end  
+<pre><code>\&gt; Here is a long line of text
+\&gt; that we wrapped over multiple lines by inserting a Markdown line break
+\&gt; that is of course multiple space characters inserted at the end
 \&gt; of a line.</code></pre>
 <p>will produce the following formatted text:</p>
 <blockquote><p>Here is a long line of text<br>
@@ -12019,7 +12028,7 @@ of a line.</p>
   </div>
 </body>
 
- 
+
 
 
 </html>
