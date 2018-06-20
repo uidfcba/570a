@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89604308-2"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-89604308-2');
+  </script>
+
 <title>numpy2d</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
@@ -8451,15 +8461,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11243,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11686,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11730,14 +11740,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11964,7 +11974,7 @@ Matrix will be 5 x 5.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>3 x 3 array = 
+<pre>3 x 3 array =
  [[0 1 2]
  [3 4 5]
  [6 7 8]]
@@ -12029,7 +12039,7 @@ Direct Element access:  1
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>3 x 3 x 3 array = 
+<pre>3 x 3 x 3 array =
  [[[ 0  1  2]
   [ 3  4  5]
   [ 6  7  8]]
@@ -12138,7 +12148,7 @@ Starting array:
  [[0 1 2 3 4]
  [5 6 7 8 9]]
 
-Index Array access: 
+Index Array access:
  [3 9]
 </pre>
 </div>
@@ -12197,7 +12207,7 @@ Index Array access:
 <pre>
 --------------------
 
- Starting Array: 
+ Starting Array:
  [[ 0  1  2  3  4]
  [ 5  6  7  8  9]
  [10 11 12 13 14]
@@ -12287,7 +12297,7 @@ New Array :
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Matrix = 
+<pre>Matrix =
  [[0 1 2]
  [3 4 5]
  [6 7 8]]
@@ -12369,10 +12379,10 @@ array and demonstrate how these two arrays can be combined.</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Array = 
+<pre>Array =
  [1 2 3 4 5 6 7 8 9]
 
-Matrix = 
+Matrix =
  [[ 9.  8.  7.]
  [ 6.  5.  4.]
  [ 3.  2.  1.]]
@@ -12443,7 +12453,7 @@ Array[3:6] + Matrix[0:] =  [ 13.  13.  13.]
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Array = 
+<pre>Array =
 [[1 2 3]
  [4 5 6]
  [7 8 9]]
@@ -12520,22 +12530,22 @@ Trace of 5 x 5 identity matrix =  5.0
  [4 5 6]
  [7 8 9]]
 
-np.sin : 
+np.sin :
  [[ 0.84147098  0.90929743  0.14112001]
  [-0.7568025  -0.95892427 -0.2794155 ]
  [ 0.6569866   0.98935825  0.41211849]]
 
-np.log and np.abs : 
+np.log and np.abs :
  [[-0.07496085 -0.04129404 -0.85041141]
  [-0.12101744 -0.01821569 -0.55374951]
  [-0.18244349 -0.00464642 -0.38497791]]
 
-np.mod : 
+np.mod :
  [[1 0 1]
  [0 1 0]
  [1 0 1]]
 
-np.logical_and : 
+np.logical_and :
  [[ True False  True]
  [False  True False]
  [ True False  True]]
@@ -12577,7 +12587,7 @@ np.logical_and :
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Greater Than or Equal Test: 
+<pre>Greater Than or Equal Test:
  [[False False False]
  [False False  True]
  [ True  True  True]]
@@ -12710,11 +12720,11 @@ Spearmanr correlation for x,x = 1.0000
 Pearsonr correlation for x,y = -1.0000
 Spearmanr correlation for x,y = -1.0000
 
-Covariance Matrix = 
+Covariance Matrix =
  [[ 9.16666667 -9.16666667]
  [-9.16666667  9.16666667]]
 
-Correlation Matrix = 
+Correlation Matrix =
  [[ 1. -1.]
  [-1.  1.]]
 
@@ -12773,7 +12783,7 @@ Spearmanr correlation for random x,y = 0.4303
   </div>
 </body>
 
- 
+
 
 
 </html>

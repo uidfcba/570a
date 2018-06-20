@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89604308-2"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-89604308-2');
+  </script>
+
 <title>intro2ols</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
@@ -8451,15 +8461,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11243,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11686,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11730,14 +11740,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -12065,11 +12075,11 @@ div#notebook {
 <pre>Pearsonr correlation for x,y = 0.816
 Spearmanr correlation for x,y = 0.818
 
-Covariance Matrix = 
+Covariance Matrix =
  [[ 11.           5.501     ]
  [  5.501        4.12726909]]
 
-Correlation Matrix = 
+Correlation Matrix =
  [[ 1.          0.81642052]
  [ 0.81642052  1.        ]]
 </pre>
@@ -12863,9 +12873,9 @@ AAAASUVORK5CYII=
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a joint probability plot, with regression line</span>
 <span class="c1"># and marginal distributions</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">adfi</span><span class="p">,</span> 
+<span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">adfi</span><span class="p">,</span>
               <span class="n">stat_func</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;reg&#39;</span><span class="p">,</span>
-              <span class="n">annot_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">template</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">{stat}</span><span class="s1"> = </span><span class="si">{val:4.3f}</span><span class="s1">&#39;</span><span class="p">,</span> 
+              <span class="n">annot_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">template</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">{stat}</span><span class="s1"> = </span><span class="si">{val:4.3f}</span><span class="s1">&#39;</span><span class="p">,</span>
                              <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;$r$&#39;</span><span class="p">,</span> <span class="n">loc</span> <span class="o">=</span> <span class="mi">2</span><span class="p">))</span>
 
 <span class="c1"># Decorate Plot</span>
@@ -13559,8 +13569,8 @@ QmCC
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot the four data sets in a two by two array.</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">adf</span><span class="p">,</span> 
-           <span class="n">fit_reg</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ci</span> <span class="o">=</span> <span class="mi">68</span><span class="p">,</span> <span class="n">col_wrap</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;muted&#39;</span><span class="p">,</span> 
+<span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;dataset&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">adf</span><span class="p">,</span>
+           <span class="n">fit_reg</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ci</span> <span class="o">=</span> <span class="mi">68</span><span class="p">,</span> <span class="n">col_wrap</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;muted&#39;</span><span class="p">,</span>
            <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">scatter_kws</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">})</span>
 
 <span class="c1">#clean up plot</span>
@@ -14283,7 +14293,7 @@ dFaXLQAAAABJRU5ErkJggg==
 <p>$$ \hat{\alpha} = \mu_y - \hat{\beta} \mu_x $$
 where $\mu_x$ and $\mu_y$ represent the mean values of x and y, respectively.</p>
 <p>We demonstrate this calculation in the following code cell, where we vectorize the operations over our array data by using NumPy functions. We also compute the Pearson's r correlation coefficient, which is related to the estimate of the slope of our simple model:</p>
-<p>$$r = \frac{\sum_i (x_i - \mu_x) (y_i - \mu_y)}{\sum_i (x_i - \mu_x) \sum_j (y_j - \mu_y)} 
+<p>$$r = \frac{\sum_i (x_i - \mu_x) (y_i - \mu_y)}{\sum_i (x_i - \mu_x) \sum_j (y_j - \mu_y)}
 = \frac{\textrm{Cov}(x, y)}{\sigma_x \sigma_y} = \hat{\beta} \ \frac{\sigma_x}{\sigma_y}$$</p>
 <hr>
 
@@ -15653,7 +15663,7 @@ Iipq/x//zsjOJKbrFQAAAABJRU5ErkJggg==
 <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">yr</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">yrs</span><span class="p">):</span>
     <span class="nb">sum</span> <span class="o">+=</span> <span class="n">int_rate</span> <span class="o">*</span> <span class="nb">sum</span>
     <span class="n">value</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span>
-    
+
     <span class="k">if</span> <span class="n">idx</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{yr}</span><span class="se">\t</span><span class="si">{sum:8.2f}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -16968,7 +16978,7 @@ EREREZF26P8D+F1w+bpPpCEAAAAASUVORK5CYII=
   </div>
 </body>
 
- 
+
 
 
 </html>
