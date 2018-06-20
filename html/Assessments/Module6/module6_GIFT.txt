@@ -1,0 +1,263 @@
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L4
+$CATEGORY: $course$/Module 6/570i Mod6 L4
+
+
+// question: 5976230  name: A Poisson distribution from scipy.stats has been created in a variable called...
+::A Poisson distribution from scipy.stats has been created in a variable called...::[html]<p>A Poisson distribution from scipy.stats has been created in a variable called pd. I have a list of data points called pts. How do create PMF of the Poisson distribution using pts.</p>{
+	=<p>pd.pmf(pts)</p>#Correct
+	~<p>pmf(pts, pd)</p>#Incorrect
+	~<p>pd(pts, pmf)</p>#Incorrect
+	~<p>pmf.create(pts, pmf)</p>#Incorrect
+}
+
+
+// question: 5976233  name: A Poisson distribution from scipy.stats has been created in a variable called...
+::A Poisson distribution from scipy.stats has been created in a variable called...::[html]<p>A Poisson distribution from scipy.stats has been created in a variable called pd. I have a list of data points called pts. How do create CDF of the Poisson distribution using pts.</p>{
+	=<p>pd.cdf(pts)</p>#Correct
+	~<p>cdf(pts, pd)</p>#Incorrect
+	~<p>pd(pts, cdf)</p>#Incorrect
+	~<p>pmf.create(pts, cdf)</p>#Incorrect
+}
+
+
+// question: 5976236  name: A Poisson distribution from scipy.stats has been created in a variable called...
+::A Poisson distribution from scipy.stats has been created in a variable called...::[html]<p>A Poisson distribution from scipy.stats has been created in a variable called pd. I have a list of data points called pts. How do create PPF of the Poisson distribution using pts.</p>{
+	=<p>pd.ppf(pts)</p>#Correct
+	~<p>ppf(pts, pd)</p>#Incorrect
+	~<p>pd(pts, ppf)</p>#Incorrect
+	~<p>pmf.create(pts, ppf)</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L1
+$CATEGORY: $course$/Module 6/570i Mod6 L1
+
+
+// question: 5976284  name: How would you calculate the probability that a random variable is less than 5?
+::How would you calculate the probability that a random variable is less than 5?::[html]<p>How would you calculate the probability that a random variable is less than 5?</p>{
+	~<p>Sum up all of the probabilities for values greater than 5</p>#Incorrect
+	=<p>Sum up all of the probabilities for values less than 5</p>#Correct
+	~<p>Sum up all of the probabilities for values equal to 5</p>#Incorrect
+	~<p>Subtract all of the probabilities for values less than 5</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L2
+$CATEGORY: $course$/Module 6/570i Mod6 L2
+
+
+// question: 5976257  name: How would you describe P(A \cap B) in words for two sets A and B?
+::How would you describe P(A \\cap B) in words for two sets A and B?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">How would you describe P(A \\cap B) in words for two sets A and B?</span></p>{
+	~<p>Probability of A or B</p>#Incorrect
+	=<p>Probability of A and B</p>#Correct
+	~<p>Probability of A given B</p>#Incorrect
+	~<p>Probability of A but not B</p>#Incorrect
+}
+
+
+// question: 5976254  name: How would you describe P(A&nbsp;\cup B)&nbsp;in words for two sets A and B?
+::How would you describe P(A&nbsp;\\cup B)&nbsp;in words for two sets A and B?::[html]<p style\="line-height\: normal;"><span style\="font-size\: 12.0pt; font-family\: 'Times New Roman';">How would you describe P(A&nbsp;<span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';">\\</span>cup B)&nbsp;<img align\="middle" alt\="" class\="Wirisformula" data-mathml\="" src\="@X@EmbeddedFile.requestUrlStub@X@sessions/5/2/3/4/3/3/4/9/3/session/wiris/@X@EmbeddedFile.requestUrlStub@X@webapps/assessment/do/authoring/modifyAssessment.png">in words for two sets A and B?</span></p>{
+	=<p>Probability of A or B</p>#Correct
+	~<p>Probability of A and B</p>#Incorrect
+	~<p>Probability of A given B</p>#Incorrect
+	~<p>Probability of A but not B</p>#Incorrect
+}
+
+
+// question: 5976260  name: How would you describe P(A|B) in words for two sets A and B?
+::How would you describe P(A|B) in words for two sets A and B?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman'; background\: yellow;">How</span><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman';"> would you describe P(A|B) in words for two sets A and B?</span></p>{
+	~<p>Probability of A or B</p>#Incorrect
+	~<p>Probability of A and B</p>#Incorrect
+	=<p>Probability of A given B</p>#Correct
+	~<p>Probability of A but not B</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L4
+$CATEGORY: $course$/Module 6/570i Mod6 L4
+
+
+// question: 5976218  name: I have imported scipy.stats as stats. Which function or class would I use to ...
+::I have imported scipy.stats as stats. Which function or class would I use to ...::[html]<p>I have imported scipy.stats as stats. Which function or class would I use to help create a poisson distribution?</p>{
+	=<p>stats.poisson()</p>#Correct
+	~<p>stat.poisson()</p>#Incorrect
+	~<p>stats.Poisson()</p>#Incorrect
+	~<p>stats.POISSON()</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L1
+$CATEGORY: $course$/Module 6/570i Mod6 L1
+
+
+// question: 5976272  name: In the context of probability what is an event?
+::In the context of probability what is an event?::[html]<p>In the context of probability what is an event?</p>{
+	~<p>A measure of how likely an event is</p>#Incorrect
+	~<p>An uncertain situation</p>#Incorrect
+	=<p>One or more outcome from an experiment</p>#Correct
+	~<p>The result of a single trial</p>#Incorrect
+}
+
+
+// question: 5976269  name: In the context of probability what is an outcome?
+::In the context of probability what is an outcome?::[html]<p>In the context of probability what is an outcome?</p>{
+	~<p>A measure of how likely an event is</p>#Incorrect
+	~<p>An uncertain situation</p>#Incorrect
+	~<p>A type of Probability</p>#Incorrect
+	=<p>The result of a single trial</p>#Correct
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L2
+$CATEGORY: $course$/Module 6/570i Mod6 L2
+
+
+// question: 5976251  name: In the context of probability, what is a sample space?
+::In the context of probability, what is a sample space?::[html]<p>In the context of probability, what is a sample space?</p>{
+	~<p>The collection of all possible experiments</p>#Incorrect
+	~<p>A single event</p>#Incorrect
+	~<p>A collection of some events</p>#Incorrect
+	=<p>The collection of all possible outcomes</p>#Correct
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L1
+$CATEGORY: $course$/Module 6/570i Mod6 L1
+
+
+// question: 5976281  name: What does the binomial distribution describe?
+::What does the binomial distribution describe?::[html]<p>What does the binomial distribution describe?</p>{
+	~<p>The number of ties in a sequence of n yes/no outcomes</p>#Incorrect
+	~<p>The number of failures in a sequence of n yes/no outcomes</p>#Incorrect
+	=<p>The number of successes in a sequence of n yes/no outcomes</p>#Correct
+	~<p>The number of distributions with two values</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L4
+$CATEGORY: $course$/Module 6/570i Mod6 L4
+
+
+// question: 5976224  name: What is a continuous random variable?
+::What is a continuous random variable?::[html]<p>What is a continuous random variable?</p>{
+	=<p>random variable with a set of possible values that is infinite and uncountable</p>#Correct
+	~<p>variable with real values</p>#Incorrect
+	~<p>variable with imaginary values</p>#Incorrect
+	~<p>variable with uncountable values</p>#Incorrect
+}
+
+
+// question: 5976221  name: What is a discrete random random variable?
+::What is a discrete random random variable?::[html]<p>What is a discrete random random variable?</p>{
+	=<p>random variable with countable values</p>#Correct
+	~<p>variable with real values</p>#Incorrect
+	~<p>variable with imaginary values</p>#Incorrect
+	~<p>variable with uncountable values</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L3
+$CATEGORY: $course$/Module 6/570i Mod6 L3
+
+
+// question: 5976248  name: What is a permutation?
+::What is a permutation?::[html]<p>What is a permutation?</p>{
+	~<p>The number of orderings of objects in a set</p>#Incorrect
+	=<p>The number of unique orderings of objects in a set</p>#Correct
+	~<p>The number of objects in a set</p>#Incorrect
+	~<p>The number of unique objects in a set</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L1
+$CATEGORY: $course$/Module 6/570i Mod6 L1
+
+
+// question: 5976275  name: What is a probability?
+::What is a probability?::[html]<p>What is a probability?</p>{
+	=<p>A measure of how likely an event is</p>#Correct
+	~<p>An uncertain situation</p>#Incorrect
+	~<p>One or more outcome from an experiment</p>#Incorrect
+	~<p>The result of a single trial</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L4
+$CATEGORY: $course$/Module 6/570i Mod6 L4
+
+
+// question: 5976227  name: What is a random variable?
+::What is a random variable?::[html]<p>What is a random variable?</p>{
+	=<p>A random variable is a mapping of a probability space to a set of real values</p>#Correct
+	~<p>A random variable is a random point of a probability space.</p>#Incorrect
+	~<p>A random variable is random number</p>#Incorrect
+	~<p>a random variable is a number taken from Python's random library</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L3
+$CATEGORY: $course$/Module 6/570i Mod6 L3
+
+
+// question: 5976245  name: What is conditional probability?
+::What is conditional probability?::[html]<p>What is conditional probability?</p>{
+	~<p>The expected value</p>#Incorrect
+	~<p>The probability that an event occured</p>#Incorrect
+	~<p>The probability that two events occur at the same time</p>#Incorrect
+	=<p>The probability of one event given that another has occurred</p>#Correct
+}
+
+
+// question: 5976242  name: What is one of the main goals of Statistics?
+::What is one of the main goals of Statistics?::[html]<p>What is one of the main goals of Statistics?</p>{
+	~<p>Procrastination</p>#Incorrect
+	=<p>Estimation</p>#Correct
+	~<p>Intuition</p>#Incorrect
+	~<p>Inspiration</p>#Incorrect
+}
+
+
+// question: 5976239  name: What is the expected value?
+::What is the expected value?::[html]<p>What is the expected value?</p>{
+	=<p>The probability weighted average of all possible values</p>#Correct
+	~<p>The average of all possible values</p>#Incorrect
+	~<p>The probability of all possible values</p>#Incorrect
+	~<p>How likely an event is</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L1
+$CATEGORY: $course$/Module 6/570i Mod6 L1
+
+
+// question: 5976278  name: What shows the exact probabilities for a particular value of a random variable?
+::What shows the exact probabilities for a particular value of a random variable?::[html]<p>What shows the exact probabilities for a particular value of a random variable?</p>{
+	=<p>Probability mass function</p>#Correct
+	~<p>Probability grass function</p>#Incorrect
+	~<p>Probability event function</p>#Incorrect
+	~<p>Probability outcome function</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 6/570i Mod6 L2
+$CATEGORY: $course$/Module 6/570i Mod6 L2
+
+
+// question: 5976263  name: What word describes two events that can't occur at the same time?
+::What word describes two events that can't occur at the same time?::[html]<p>What word describes two events that can't occur at the same time?</p>{
+	~<p>Independent</p>#Incorrect
+	=<p>Disjoint</p>#Correct
+	~<p>Irrelevant</p>#Incorrect
+	~<p>Unequal</p>#Incorrect
+}
+
+
+// question: 5976266  name: What word describes two events that don't affect each other's occurrence?
+::What word describes two events that don't affect each other's occurrence?::[html]<p>What word describes two events that don't affect each other's occurrence?</p>{
+	=<p>Independent</p>#Correct
+	~<p>Disjoint</p>#Incorrect
+	~<p>Irrelevant</p>#Incorrect
+	~<p>Unequal</p>#Incorrect
+}
+
+

@@ -1,0 +1,252 @@
+// question: 0  name: Switch category to $course$/Module 5/570i Mod5 L3
+$CATEGORY: $course$/Module 5/570i Mod5 L3
+
+
+// question: 5976308  name: How would you import the matplotlib module?
+::How would you import the matplotlib module?::[html]<p>How would you import the matplotlib module?</p>{
+	=<p>import matplotlib.pyplot as plt</p>#Correct
+	~<p>from pyplot import matplotlib.plt</p>#Incorrect
+	~<p>load matplotlib.plt as pyplot</p>#Incorrect
+	~<p>library matplotlib.pyplot as plt</p>#Incorrect
+}
+
+
+// question: 5976317  name: How would you import the seaborn module?
+::How would you import the seaborn module?::[html]<p>How would you import the seaborn module?</p>{
+	=<p>import seaborn as sns</p>#<p>Correct</p>
+	~<p>import seaborn sns</p>#<p>Incorrect</p>
+	~<p>load seaborn as sns</p>#<p>Incorrect</p>
+	~<p>library seaborn as sns</p>#<p>Incorrect</p>
+}
+
+
+// question: 0  name: Switch category to $course$/Module 5/570i Mod5 L4
+$CATEGORY: $course$/Module 5/570i Mod5 L4
+
+
+// question: 5976293  name: I have imported seaborn as sns, and loaded data to a dataframe call x with a ...
+::I have imported seaborn as sns, and loaded data to a dataframe call x with a ...::[html]<p>I have imported seaborn as sns, and loaded data to a dataframe call x with a column named "A". Which of following code snippets creates a boxplot using seaborn?</p>{
+	=<p>sns.boxplot(x\=x['A'])</p>#Correct
+	~<p>boxplot(x\=x['A'])</p>#Incorrect
+	~<p>sns.boxplot(x\=x[A])</p>#Incorrect
+	~<p>sns.boxplot(x\=x['a'])</p>#Incorrect
+}
+
+
+// question: 5976290  name: I have imported seaborn. What function or class would I use to make a rugplot?
+::I have imported seaborn. What function or class would I use to make a rugplot?::[html]<p>I have imported seaborn. What function or class would I use to make a rugplot?</p>{
+	=<p>rugplot</p>#Correct
+	~<p>Rugplot</p>#Incorrect
+	~<p>RUGPLOT</p>#Incorrect
+	~<p>pyplot</p>#Incorrect
+	~<p>pandas</p>#Incorrect
+}
+
+
+// question: 5976299  name: If I have N data points how many bins should I have?
+::If I have N data points how many bins should I have?::[html]<p>If I have N data points how bins should I have?</p>{
+	=<p>root-three bins</p>#<p>Correct</p>
+	~<p>N bins</p>#<p>Incorrect</p>
+	~<p>N/2 bins</p>#<p>Incorrect</p>
+	~<p>N+1 bins</p>#<p>Incorrect</p>
+}
+
+
+// question: 5976296  name: matplotlib.pyplot is imported as plt. We then create a figure and axes object...
+::matplotlib.pyplot is imported as plt. We then create a figure and axes object...::[html]<p>matplotlib.pyplot is imported as plt. We then create a figure and axes object from plt.subplots as fig and ax respectively. Which function or class would I use to create histogram from pyplot?</p>{
+	=<p>ax.hist()</p>#Correct
+	~<p>ax.hist</p>#Incorrect
+	~<p>sns.hist</p>#Incorrect
+	~<p>sns.hist()</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 5/570i Mod5 L1
+$CATEGORY: $course$/Module 5/570i Mod5 L1
+
+
+// question: 5976350  name: What effect can truncating the axis of a bar plot have on the perception of ...
+::What effect can truncating the axis of a bar plot have on the perception of ...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">What effect can truncating the axis of a bar plot have on the perception of the plot?</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Makes differences between bars more dramatic</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Makes differences between bars less dramatic</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">It has no effect.</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">It becomes a histogram.</span></p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 5/570i Mod5 L3
+$CATEGORY: $course$/Module 5/570i Mod5 L3
+
+
+// question: 5976311  name: What effect would adding the option "figsize(5,5)" have on a resulting figure...
+::What effect would adding the option "figsize(5,5)" have on a resulting figure...::[html]<p>What effect would adding the option "figsize(5,5)" have on a resulting figure from plt.subplots()?</p>{
+	=<p>Make the figure 5 units wide and 5 units tall</p>#Correct
+	~<p>Make the figure 25 units wide</p>#Incorrect
+	~<p>Make the figure 25 units tall</p>#Incorrect
+	~<p>Make the figure 5 units taller and 5 units wider</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 5/570i Mod5 L4
+$CATEGORY: $course$/Module 5/570i Mod5 L4
+
+
+// question: 5976305  name: What happens if you use too many bins in a Histogram?
+::What happens if you use too many bins in a Histogram?::[html]<p>What happens if you use too many bins in a Histogram?</p>{
+	=<p>More bins capture more detail however it may also capture noise.</p>#Correct
+	~<p>More bins capture less detail however it may also capture noise</p>#Incorrect
+	~<p>More bins capture more detail</p>#Incorrect
+	~<p>It will not look nice</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 5/570i Mod5 L2
+$CATEGORY: $course$/Module 5/570i Mod5 L2
+
+
+// question: 5976338  name: What type of graph makes it easy to see overall changes over time?
+::What type of graph makes it easy to see overall changes over time?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">What type of graph makes it easy to see overall changes over time?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Time graph</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Bar graph</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Pie graph</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Line graph</span></p>#Correct
+}
+
+
+// question: 5976329  name: What type of variable describes how much there is of something?
+::What type of variable describes how much there is of something?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">What type of variable describes how much there is of something?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Qualitative</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Categorical</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Quantitative</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Descriptive</span></p>#Incorrect
+}
+
+
+// question: 5976332  name: What type of variable describes what something is?
+::What type of variable describes what something is?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">What type of variable describes what something is?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Illustrative</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Categorical</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Quantitative</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Descriptive</span></p>#Incorrect
+}
+
+
+// question: 5976335  name: What type of variable should hue be used for in order to make distinctions?
+::What type of variable should hue be used for in order to make distinctions?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">What type of variable should hue be used for in order to make distinctions?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Illustrative</span></p>#Incorrect
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Categorical</span></p>#Correct
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Quantitative</span></p>#Incorrect
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Descriptive</span></p>#Incorrect
+}
+
+
+// question: 5976341  name: Which attributes are useful for encoding categorical values?
+::Which attributes are useful for encoding categorical values?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which attributes are useful for encoding categorical values?</span></p>{
+	~%50%<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Hue</span></p>
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Area</span></p>
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Lightness</span></p>
+	~%50%<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Shape</span></p>
+}
+
+
+// question: 5976344  name: Which attributes are useful for encoding quantitative values?
+::Which attributes are useful for encoding quantitative values?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which attributes are useful for encoding quantitative values?</span></p>{
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Spatial grouping</span></p>
+	~%50%<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Saturation</span></p>
+	~%50%<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">2-D position</span></p>
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Enclosure</span></p>
+}
+
+
+// question: 0  name: Switch category to $course$/Module 5/570i Mod5 L3
+$CATEGORY: $course$/Module 5/570i Mod5 L3
+
+
+// question: 5976326  name: Which below code will change the y-axis limits of a plot to between 10 and 20?
+::Which below code will change the y-axis limits of a plot to between 10 and 20?::[html]<p>Which below code will change the y-axis limits of a plot to between 10 and 20?</p>{
+	=<p>ax.set_ylim(10,20)</p>#Correct
+	~<p>ax.ylim(10,20)</p>#Incorrect
+	~<p>ax.y_lim(10,20)</p>#Incorrect
+	~<p>ax.change_ylim(10,20)</p>#Incorrect
+}
+
+
+// question: 5976314  name: Which below code will save a plot titled "my_plot.pdf"?
+::Which below code will save a plot titled "my_plot.pdf"?::[html]<p>Which below code will save a plot titled "my_plot.pdf"?</p>{
+	~<p>plt.figsave("my_plot.pdf")</p>#<p>Incorrect</p>
+	=<p>plt.savefig(my_plot.pdf)</p>#<p>Correct</p>
+	=<p>plt.savefig("my_plot.pdf")</p>#<p>Incorrect</p>
+	~<p>plt.save("my_plot.pdf")</p>#<p>Incorrect</p>
+}
+
+
+// question: 0  name: Switch category to $course$/Module 5/570i Mod5 L1
+$CATEGORY: $course$/Module 5/570i Mod5 L1
+
+
+// question: 5976353  name: Which of following values should be used when comparing across categories or ...
+::Which of following values should be used when comparing across categories or ...::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Which of following values should be used when comparing across categories or groups?</span></p>{
+	~%50%<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Percentages</span></p>
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Absolute values</span></p>
+	~%50%<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Rates</span></p>
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">None of the above</span></p>
+}
+
+
+// question: 0  name: Switch category to $course$/Module 5/570i Mod5 L3
+$CATEGORY: $course$/Module 5/570i Mod5 L3
+
+
+// question: 5976320  name: Which of the below code will add the label "x-axis" to the x-axis of a plot?
+::Which of the below code will add the label "x-axis" to the x-axis of a plot?::[html]<p>Which of the below code will add the label "x-axis" to the x-axis of a plot?</p>{
+	~<p>ax.xlabel("x-axis")</p>#Incorrect
+	~<p>ax.set_ylabel("x-axis")</p>#Incorrect
+	=<p>ax.set_xlabel("x-axis")</p>#Correct
+	~<p>ax.set_xlabel(x-axis)</p>#Incorrect
+}
+
+
+// question: 5976323  name: Which of the below code will add the title "my plot" to a plot?
+::Which of the below code will add the title "my plot" to a plot?::[html]<p>Which of the below code will add the title "my plot" to a plot?</p>{
+	~<p>ax.set_label("my plot")</p>#Incorrect
+	~<p>ax.title("x-axis")</p>#Incorrect
+	~<p>ax.set_title(my plot)</p>#Incorrect
+	=<p>ax.set_title("my plot")</p>#Correct
+}
+
+
+// question: 0  name: Switch category to $course$/Module 5/570i Mod5 L4
+$CATEGORY: $course$/Module 5/570i Mod5 L4
+
+
+// question: 5976287  name: Which of these types of plots can be used to display 1D distribution of data?
+::Which of these types of plots can be used to display 1D distribution of data?::[html]<p>Which of these types of plots can be used to display 1D distribution of data?</p>{
+	~%33.33333%<p>rugplot</p>
+	~%33.33333%<p>boxplot</p>
+	~%33.33333%<p>histogram</p>
+	~<p>3d scatter plot</p>
+}
+
+
+// question: 5976302  name: Which plot type can be used to explore how data are distributed in a binned ...
+::Which plot type can be used to explore how data are distributed in a binned ...::[html]<p>Which plot type can be used to explore how data are distributed in a binned representation?</p>{
+	=<p>Histogram</p>#Correct
+	~<p>Plot</p>#Incorrect
+	~<p>3D Scatter Plot</p>#Incorrect
+	~<p>Box Plot</p>#Incorrect
+}
+
+
+// question: 0  name: Switch category to $course$/Module 5/570i Mod5 L1
+$CATEGORY: $course$/Module 5/570i Mod5 L1
+
+
+// question: 5976347  name: Why are pie charts difficult to interpret?
+::Why are pie charts difficult to interpret?::[html]<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">Why are pie charts difficult to interpret?</span></p>{
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">It doesn't show percentages.<br /></span></p>#<p>Correct</p>
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">It's hard to not think about pie when looking at one.</span></p>#<p>Incorrect</p>
+	=<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">It's difficult to reliably compare the 2-D areas.</span></p>#<p>Incorrect</p>
+	~<p><span style\="font-size\: 12.0pt; line-height\: 107%; font-family\: 'Times New Roman',serif;">It's circular.</span></p>#<p>Incorrect</p>
+}
+
+
