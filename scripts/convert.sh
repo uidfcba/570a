@@ -1,6 +1,12 @@
 #!/bin/bash
+#
+# Assume notebooks have already been copied into html directory
+# and there are eight modules
+
 for i in {1..8} ;  
 do 
+
+cd ../html ;
 
 cd Module$i ; 
 

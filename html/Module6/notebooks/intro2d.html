@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
+<title>intro2d</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121173975-1"></script>
-  <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-121173975-1');
-  </script>
-
-<title>intro2d</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -21,8 +13,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1117,6 +1109,7 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2545,6 +2538,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3035,6 +3029,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8461,15 +8456,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box
+/* This file is a compatability layer.  It allows the usage of flexible box 
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this
+`Modern browsers` comments below).  Browsers that are known to implement this 
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+
+    Internet Explorer 11+ 
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -8765,9 +8760,6 @@ body > #header .header-bar {
     margin-left: 10px;
   }
 }
-[dir="rtl"] #ipython_notebook {
-  float: right !important;
-}
 #noscript {
   width: auto;
   padding-top: 16px;
@@ -8970,14 +8962,8 @@ span#login_widget > .button .badge,
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
@@ -9000,16 +8986,6 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
-}
-[dir="rtl"] .list_toolbar .tree-buttons {
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9146,9 +9122,6 @@ ul.breadcrumb span {
 #tree-selector {
   padding-right: 0px;
 }
-[dir="rtl"] #tree-selector a {
-  float: right;
-}
 #button-select-all {
   min-width: 50px;
 }
@@ -9238,9 +9211,6 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
-}
 .kernel-menu-icon {
   padding-right: 12px;
   width: 24px;
@@ -9285,9 +9255,6 @@ ul#new-menu {
 }
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
-}
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
 }
 .delete-button {
   display: none;
@@ -9584,7 +9551,6 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
-  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9605,6 +9571,11 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -11243,7 +11214,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for
+  /* This injects handle bars (a short, wide = symbol) for 
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11275,7 +11246,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 21ex;
+  width: 20ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11587,7 +11558,6 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
-  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11601,9 +11571,6 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
-}
-.terminal-app .terminal .xterm-rows {
-  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11664,10 +11631,8 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11678,15 +11643,13 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-
+    
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11736,18 +11699,20 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  }
-  div.output_wrapper {
+  } 
+  div.output_wrapper { 
     display: block;
-    page-break-inside: avoid;
+    page-break-inside: avoid; 
   }
-  div.output {
+  div.output { 
     display: block;
-    page-break-inside: avoid;
+    page-break-inside: avoid; 
   }
 }
 </style>
@@ -11757,7 +11722,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11781,7 +11746,8 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11832,8 +11798,8 @@ div#notebook {
 <span class="c1"># Global color definition</span>
 <span class="n">g_colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">sns</span><span class="o">.</span><span class="n">xkcd_rgb</span><span class="p">[</span><span class="s1">&#39;pale red&#39;</span><span class="p">],</span>
             <span class="n">sns</span><span class="o">.</span><span class="n">xkcd_rgb</span><span class="p">[</span><span class="s1">&#39;denim blue&#39;</span><span class="p">],</span>
-            <span class="n">sns</span><span class="o">.</span><span class="n">xkcd_rgb</span><span class="p">[</span><span class="s1">&#39;bluegrey&#39;</span><span class="p">],</span>
-            <span class="n">sns</span><span class="o">.</span><span class="n">xkcd_rgb</span><span class="p">[</span><span class="s1">&#39;faded green&#39;</span><span class="p">],</span>
+            <span class="n">sns</span><span class="o">.</span><span class="n">xkcd_rgb</span><span class="p">[</span><span class="s1">&#39;bluegrey&#39;</span><span class="p">],</span> 
+            <span class="n">sns</span><span class="o">.</span><span class="n">xkcd_rgb</span><span class="p">[</span><span class="s1">&#39;faded green&#39;</span><span class="p">],</span> 
             <span class="n">sns</span><span class="o">.</span><span class="n">xkcd_rgb</span><span class="p">[</span><span class="s1">&#39;dusty purple&#39;</span><span class="p">]]</span>
 </pre></div>
 
@@ -11842,14 +11808,14 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="Uniform">Uniform<a class="anchor-link" href="#Uniform">&#182;</a></h3><p>The simplest theoretical distribution is the <em>Uniform</em> distribution, which has probability uniformly distributed between two end points. A Uniform distribution can be either <a href="https://en.wikipedia.org/wiki/Discrete_uniform_distribution">discrete</a>, being defined only for integer values, or <a href="https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)">continuous</a>, being defined over all real values. In the latter case, we have a probability density function $f(x)$, which for $a \leq x \leq b$ is defined:</p>
-<p>$$f(x) = \frac{1}{(b - a)} $$</p>
-<p>with probability zero everywhere else.</p>
+$$f(x) = \frac{1}{(b - a)} $$<p>with probability zero everywhere else.</p>
 <p>To create a discrete uniform distribution, we use the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.randint.html"><code>randint</code></a> function from the SciPy module. We first create our distribution by passing in the two end points, after which we can apply different functions to perform specific operations. The result of this operation is the creation of a <em>frozen</em> distribution, which allows different statistical functions to be easily applied to the created distribution without specifying the distribution parameters repeatedly (e.g., the end points of the Uniform distribution).</p>
 <p>The primary function we apply to a frozen distribution is the <code>rvs</code> function, which generates a sample of random values from a distribution. For example, to generate a set of ten integers from a discrete Uniform distribution between five and ten:</p>
 <div class="highlight"><pre><span></span><span class="n">udrv</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -11870,7 +11836,7 @@ div#notebook {
 <span class="n">ucrv</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># Create sample points</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>        
 
 <span class="c1"># Construct PDF</span>
 <span class="n">probs</span> <span class="o">=</span> <span class="n">ucrv</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -11904,9 +11870,9 @@ div#notebook {
     <span class="c1"># Plot distribution PMF</span>
     <span class="n">axs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dist</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">),</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
              <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">f</span><span class="s1">&#39;Discrete PMF&#39;</span><span class="p">)</span>
-
+    
     <span class="c1"># Plot frozen PMF</span>
-    <span class="n">axs</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">froz</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">froz</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> 
                <span class="n">colors</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Frozen PMF&#39;</span><span class="p">)</span>
 
 <span class="c1"># Function to plot continuous distribution</span>
@@ -11914,11 +11880,11 @@ div#notebook {
     <span class="c1"># Plot distribution PMF</span>
     <span class="n">axs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dist</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span> <span class="o">-</span> <span class="n">low</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
              <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">f</span><span class="s1">&#39;Contiuous PMF&#39;</span><span class="p">)</span>
-
+    
     <span class="c1"># Plot frozen PMF</span>
-    <span class="n">axs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">froz</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">froz</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> 
                <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Frozen PMF&#39;</span><span class="p">)</span>
-
+    
     <span class="c1"># Plot binned counts</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">froz</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
     <span class="n">axs</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span>
@@ -11930,21 +11896,21 @@ div#notebook {
     <span class="c1"># Decide whch helper function to call</span>
     <span class="k">if</span> <span class="n">kind</span> <span class="o">==</span> <span class="s1">&#39;Discrete&#39;</span><span class="p">:</span>
         <span class="c1"># Sampling range</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>        
         <span class="n">plot_pmf</span><span class="p">(</span><span class="n">axs</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">,</span> <span class="n">dist</span><span class="p">,</span> <span class="n">froz</span><span class="p">)</span>
-
+        
     <span class="k">elif</span> <span class="n">kind</span> <span class="o">==</span><span class="s1">&#39;Continuous&#39;</span><span class="p">:</span>
         <span class="c1"># Sampling range</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>        
         <span class="n">plot_pdf</span><span class="p">(</span><span class="n">axs</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">,</span> <span class="n">dist</span><span class="p">,</span> <span class="n">froz</span><span class="p">)</span>
-
+        
     <span class="c1"># We scale the y-axis to allow room for the legend</span>
     <span class="n">axs</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.75</span> <span class="o">*</span> <span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">high</span> <span class="o">-</span> <span class="n">low</span><span class="p">))</span>
 
     <span class="c1"># Decorate plot</span>
     <span class="n">axs</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
     <span class="n">axs</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-    <span class="n">axs</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;P(X)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">r&#39;P(X)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
     <span class="n">axs</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{kind}</span><span class="s1"> Uniform Distribution: [</span><span class="si">{low}</span><span class="s1">, </span><span class="si">{high}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
     <span class="n">axs</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
     <span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">trim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -11966,11 +11932,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -12409,7 +12371,8 @@ RpRHAAAAAIAR5REAAAAAYER5BAAAAAAYUR4BAAAAAEaURwAAAACAEeURAAAAAGBEeQQAAAAAGP1f
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12423,8 +12386,7 @@ RpRHAAAAAIAR5REAAAAAYER5BAAAAAAYUR4BAAAAAEaURwAAAACAEeURAAAAAGBEeQQAAAAAGP1f
 <li>The probability an event occurs within a small interval is proportional to the length of the interval or the actual probability is determined by a Binomial distribution where the number of trials is much larger than the number of successes.</li>
 </ol>
 <p>When these conditions are true, given a positive, real-valued rate parameter $\mu$, we have the probability of observing $X$ events in a Poisson process:</p>
-<p>$$ P(X) = \frac{e^{-\mu} \mu^X}{X!} $$</p>
-<p>The Poisson distribution has mean and variance equal to the rate parameter, $\mu$. The Poisson distribution can be derived as a special case of the Binomial distribution where the number of trials goes to infinity, while the number of successes remains fixed, a result known as the <a href="https://en.wikipedia.org/wiki/Poisson_distribution#law_of_rare_events">Law of Rare Events</a>.</p>
+$$ P(X) = \frac{e^{-\mu} \mu^X}{X!} $$<p>The Poisson distribution has mean and variance equal to the rate parameter, $\mu$. The Poisson distribution can be derived as a special case of the Binomial distribution where the number of trials goes to infinity, while the number of successes remains fixed, a result known as the <a href="https://en.wikipedia.org/wiki/Poisson_distribution#law_of_rare_events">Law of Rare Events</a>.</p>
 <p>To work with this distribution in Python, we will create the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.poisson.html"><code>poisson</code></a> distribution by specifying the rate parameter to create a frozen distribution:</p>
 <div class="highlight"><pre><span></span><span class="c1"># Create frozen Poisson Discrete Distribution (pdd)</span>
 <span class="n">mu</span> <span class="o">=</span> <span class="mf">2.5</span>
@@ -12465,8 +12427,8 @@ RpRHAAAAAIAR5REAAAAAYER5BAAAAAAYUR4BAAAAAEaURwAAAACAEeURAAAAAGBEeQQAAAAAGP1f
 
 <span class="c1"># Decorate plot</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$X$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$P(X|\mu)$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">r&quot;$X$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">r&quot;$P(X|\mu)$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Poisson PMF&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">trim</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
@@ -12480,11 +12442,7 @@ RpRHAAAAAIAR5REAAAAAYER5BAAAAAAYUR4BAAAAAEaURwAAAACAEeURAAAAAGBEeQQAAAAAGP1f
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -12757,7 +12715,8 @@ YII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12773,8 +12732,7 @@ YII=
 <hr>
 <h3 id="Normal-Distribution">Normal Distribution<a class="anchor-link" href="#Normal-Distribution">&#182;</a></h3><p>Perhaps the most common distribution is the <a href="https://en.wikipedia.org/wiki/Normal_distribution"><em>Normal</em></a> (or Gaussian) distribution, which occurs frequently in nature and is also frequently seen as a result of the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem">Central Limit Theorem</a>, which will be discussed later in this notebook. The Normal distribution is often referred to as the <strong>bell curve</strong> since it resembles a bell. This distribution can be used to represent the heights of a group of people errors in measurements, health measurements such as blood pressure, grades on a test, or the measurements of items manufactured by the same machine.</p>
 <p>Given a mean value, $\mu$, and standard deviation, $\sigma$, the probability density function for a Normal distribution is given by</p>
-<p>$$ P(X) = \frac{1}{\sqrt{2 \pi \sigma}} \ \exp^{\frac{-(X - \mu)^2}{2 \sigma^2}} $$</p>
-<p>Note that the median, mode, and mean values all coincide for a Normal distribution, while the standard deviation measures how wide the distribution is around the central value. Given the ubiquity of the Normal distribution, you likely should memorize the percent of all data in a Normal distribution enclosed by $X$ standard deviations (i.e., $\mu \pm X \sigma$):</p>
+$$ P(X) = \frac{1}{\sqrt{2 \pi \sigma}} \ \exp^{\frac{-(X - \mu)^2}{2 \sigma^2}} $$<p>Note that the median, mode, and mean values all coincide for a Normal distribution, while the standard deviation measures how wide the distribution is around the central value. Given the ubiquity of the Normal distribution, you likely should memorize the percent of all data in a Normal distribution enclosed by $X$ standard deviations (i.e., $\mu \pm X \sigma$):</p>
 <table>
 <thead><tr>
 <th>$X \ \sigma$</th>
@@ -12801,15 +12759,13 @@ YII=
 </tbody>
 </table>
 <p>An alternative form, known as the standard normal distribution, has zero mean and unit standard deviation, thus the standard normal distribution has the following probability density function:</p>
-<p>$$ P(X) = \frac{1}{\sqrt{2 \pi}} \ \exp^{\frac{-X^2}{2}} $$</p>
-<p>A general Normal distribution can be transformed into a standard normal distribution by</p>
+$$ P(X) = \frac{1}{\sqrt{2 \pi}} \ \exp^{\frac{-X^2}{2}} $$<p>A general Normal distribution can be transformed into a standard normal distribution by</p>
 <ol>
 <li>subtracting the mean value, and</li>
 <li>dividing by the standard deviation.</li>
 </ol>
 <p>This process is sometimes encoded by the <a href="https://en.wikipedia.org/wiki/Standard_score"><em>standard score</em></a> or <em>z-score</em>,</p>
-<p>$$ z = \frac{x - \mu}{\sigma} $$</p>
-<p>which has the benefit of (1) allowing different Normal distributions to be easily compared since they are all on the same scale, and (2) simplifying the interpretation of the result since the z-score implicitly is a measure of the number of standard deviations a value is from the mean of the distribution.</p>
+$$ z = \frac{x - \mu}{\sigma} $$<p>which has the benefit of (1) allowing different Normal distributions to be easily compared since they are all on the same scale, and (2) simplifying the interpretation of the result since the z-score implicitly is a measure of the number of standard deviations a value is from the mean of the distribution.</p>
 <p>In Python, we create a Normal distribution by using the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html"><code>norm</code></a> object in the SciPy module, which takes a mean value and a standard deviation. For example, to create a frozen Normal distribution with $\mu = 2.5$ and $\sigma = 1.2$:</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
 
@@ -12836,22 +12792,22 @@ YII=
 <span class="n">sig</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
 
 <span class="c1"># Local label definition</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$\mu = 1.0$, $\sigma = 0.25$&#39;</span><span class="p">,</span>
-          <span class="sa">r</span><span class="s1">&#39;$\mu = 2.0$, $\sigma = 0.5$&#39;</span><span class="p">,</span>
-          <span class="sa">r</span><span class="s1">&#39;$\mu = 3.0$, $\sigma = 1.0$&#39;</span><span class="p">]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">r&#39;$\mu = 1.0$, $\sigma = 0.25$&#39;</span><span class="p">,</span>
+          <span class="s1">r&#39;$\mu = 2.0$, $\sigma = 0.5$&#39;</span><span class="p">,</span>
+          <span class="s1">r&#39;$\mu = 3.0$, $\sigma = 1.0$&#39;</span><span class="p">]</span>
 
 <span class="c1"># Sampling points</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 
 <span class="c1"># Create and Plot Normal PDFs</span>
-<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mu</span><span class="p">)):</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mu</span><span class="p">)):</span>    
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">sig</span><span class="p">[</span><span class="n">idx</span><span class="p">]),</span>
             <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">2</span> <span class="o">+</span> <span class="n">idx</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
 
 <span class="c1"># Decorate plot</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$X$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$P(X|\mu, \sigma)$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">r&quot;$X$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">r&quot;$P(X|\mu, \sigma)$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Gaussian PMF&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">trim</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">offset</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
@@ -12865,11 +12821,7 @@ YII=
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -13487,7 +13439,8 @@ HkoSOSGEEEIIDyWJnBBCCCGEh/r/ZCRBKVjPo+MAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13498,12 +13451,11 @@ HkoSOSGEEEIIDyWJnBBCCCGEh/r/ZCRBKVjPo+MAAAAASUVORK5CYII=
 
 <span class="n">td</span> <span class="o">=</span> <span class="n">t</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
-<p>In SciPy, this distribution is only defined for $ df &gt; 0$. To shift the distribution, the <code>loc</code> and <code>scale</code> parameters can be specified.</p>
+<p>In SciPy, this distribution is only defined for $ df > 0$. To shift the distribution, the <code>loc</code> and <code>scale</code> parameters can be specified.</p>
 <h3 id="$\chi^2$">$\chi^2$<a class="anchor-link" href="#$\chi^2$">&#182;</a></h3><p>A <a href="https://en.wikipedia.org/wiki/Chi-squared_distribution"><em>$\chi^2$</em></a> distribution is a widely used distribution in inferential statistics and when determining the quality of a model fit. Formally, the sum of $k$ independent, standard normal variables ($Z_i$) is distributed according to the $\chi^2$ distribution with $k$ degrees of freedom. The probability density function for a $\chi^2$ distribution is given by</p>
-<p>$$
-P(x) = \frac{x^{(k/2 - 1)}e^{-x/2}}{2^{k/2} \Gamma\left( \frac{k}{2} \right)}
 $$
-for $x &gt; 0$, and $P(x) = 0$ otherwise. $\Gamma \left( \frac{k}{2} \right)$ is the Gamma function.</p>
+P(x) = \frac{x^{(k/2 - 1)}e^{-x/2}}{2^{k/2} \Gamma\left( \frac{k}{2} \right)} 
+$$<p>for $x > 0$, and $P(x) = 0$ otherwise. $\Gamma \left( \frac{k}{2} \right)$ is the Gamma function.</p>
 <p>In Python, we generate and use a $\chi^2$ distribution by using the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2.html"><code>chi2</code></a> object in the SciPy module. The $k$ parameter is specified by using the <code>df</code>, or degrees of freedom, parameter when creating the object.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">chi2</span>
 
@@ -13514,7 +13466,7 @@ for $x &gt; 0$, and $P(x) = 0$ otherwise. $\Gamma \left( \frac{k}{2} \right)$ is
 
 <span class="n">fd</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">dfn</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">dfd</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
-<p>In SciPy, this distribution is only defined for $ x &gt; 0$. To shift the distribution, the <code>loc</code> and <code>scale</code> parameters can be specified.</p>
+<p>In SciPy, this distribution is only defined for $ x > 0$. To shift the distribution, the <code>loc</code> and <code>scale</code> parameters can be specified.</p>
 <h3 id="LogNormal-Distribution">LogNormal Distribution<a class="anchor-link" href="#LogNormal-Distribution">&#182;</a></h3><p>A <a href="http://en.wikipedia.org/wiki/Log-normal_distribution"><em>LogNormal</em></a> distribution is used to model random variables whose logarithm is distributed normally. This distribution can be used to model the size of living tissues, the length of comments posted on Internet forums, extreme values of rainfall, repair times for many systems, the allocation of wealth for approximately the lower 99% of the population, and the LogNormal distribution underlies the financial Black-Scholes model.</p>
 <p>Formally, the probability density function for a LogNormal distribution is given by
 $$
@@ -13525,7 +13477,7 @@ $$</p>
 
 <span class="n">lnd</span> <span class="o">=</span> <span class="n">lognorm</span><span class="p">(</span><span class="n">scale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">1.25</span><span class="p">),</span> <span class="n">s</span> <span class="o">=</span> <span class="mf">0.75</span><span class="p">)</span>
 </pre></div>
-<p>In SciPy, this distribution is only defined for $ x &gt; 0$ and $s &gt; 0$. To shift the distribution, the <code>loc</code> and <code>scale</code> parameters can be specified.</p>
+<p>In SciPy, this distribution is only defined for $ x > 0$ and $s > 0$. To shift the distribution, the <code>loc</code> and <code>scale</code> parameters can be specified.</p>
 <hr>
 <p>Note: We use a special trick in the following code cells called <em>tuple unpacking</em>. Simply put, we create arrays of parameters for the different distributions, and pass the entire tuple into the function as shown in the first code block below. The function will unpack the elements in the tuple and <strong>in order</strong> assign them to required (or optional) parameters. The only reason we do this is to shorten the code, if it is easier for you to follow or understand, simply unpack these operations as demonstrated in the second code block.</p>
 <div class="highlight"><pre><span></span><span class="n">ln_params</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)),</span> <span class="p">(</span><span class="o">.</span><span class="mi">75</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)),</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))]</span>
@@ -13555,7 +13507,7 @@ $$</p>
 
     <span class="c1"># Decorate plot</span>
     <span class="n">axs</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
-    <span class="n">axs</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$X$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">r&quot;$X$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
     <span class="n">axs</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ylbl</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
     <span class="n">axs</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
     <span class="n">axs</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
@@ -13568,26 +13520,26 @@ $$</p>
 <span class="c1"># Compute and plot Student&#39;s t-Distribution</span>
 <span class="n">t_params</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)]</span>
 <span class="n">ftl</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">)</span> <span class="k">for</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">t_params</span><span class="p">]</span>
-<span class="n">tlbl</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$df = </span><span class="si">{0}</span><span class="s1">$, $\mu = </span><span class="si">{1}</span><span class="s1">$, $\sigma = </span><span class="si">{2}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">t_params</span><span class="p">]</span>
+<span class="n">tlbl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">r&#39;$df = </span><span class="si">{0}</span><span class="s1">$, $\mu = </span><span class="si">{1}</span><span class="s1">$, $\sigma = </span><span class="si">{2}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">t_params</span><span class="p">]</span>
 
-<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">ftl</span><span class="p">,</span> <span class="n">tlbl</span><span class="p">,</span>
-           <span class="sa">r</span><span class="s1">&#39;$P(X | df, \mu, \sigma)$&#39;</span><span class="p">,</span> <span class="s2">&quot;Student&#39;s t-Distribution&quot;</span><span class="p">)</span>
+<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">ftl</span><span class="p">,</span> <span class="n">tlbl</span><span class="p">,</span> 
+           <span class="s1">r&#39;$P(X | df, \mu, \sigma)$&#39;</span><span class="p">,</span> <span class="s2">&quot;Student&#39;s t-Distribution&quot;</span><span class="p">)</span>
 
 <span class="c1"># Compute and plot f-Distribution</span>
 <span class="n">f_params</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">)]</span>
 <span class="n">ffl</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">)</span> <span class="k">for</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">f_params</span><span class="p">]</span>
-<span class="n">flbl</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$df1 =$ </span><span class="si">{0}</span><span class="s1">, $df2 =$ </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">f_params</span><span class="p">]</span>
+<span class="n">flbl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">r&#39;$df1 =$ </span><span class="si">{0}</span><span class="s1">, $df2 =$ </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">f_params</span><span class="p">]</span>
 
-<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">ffl</span><span class="p">,</span> <span class="n">flbl</span><span class="p">,</span>
-           <span class="sa">r</span><span class="s1">&#39;$P(X | df1, df2)$&#39;</span><span class="p">,</span> <span class="s2">&quot;f-Distribution&quot;</span><span class="p">)</span>
+<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">ffl</span><span class="p">,</span> <span class="n">flbl</span><span class="p">,</span> 
+           <span class="s1">r&#39;$P(X | df1, df2)$&#39;</span><span class="p">,</span> <span class="s2">&quot;f-Distribution&quot;</span><span class="p">)</span>
 
 <span class="c1"># Compute and plot ChiSqaured Distribution</span>
 <span class="n">c_params</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">fcl</span> <span class="o">=</span> <span class="p">[</span><span class="n">chi2</span><span class="p">(</span><span class="n">params</span><span class="p">)</span> <span class="k">for</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">c_params</span><span class="p">]</span>
-<span class="n">clbl</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$k = </span><span class="si">{0}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">c_params</span><span class="p">]</span>
+<span class="n">clbl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">r&#39;$k = </span><span class="si">{0}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">c_params</span><span class="p">]</span>
 
-<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">fcl</span><span class="p">,</span> <span class="n">clbl</span><span class="p">,</span>
-           <span class="sa">r</span><span class="s1">&#39;$P(X | k)$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$\chi^2$-Distribution&quot;</span><span class="p">)</span>
+<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">fcl</span><span class="p">,</span> <span class="n">clbl</span><span class="p">,</span> 
+           <span class="s1">r&#39;$P(X | k)$&#39;</span><span class="p">,</span> <span class="s2">r&quot;$\chi^2$-Distribution&quot;</span><span class="p">)</span>
 
 <span class="c1"># Compute and plot LogNormal Distribution</span>
 <span class="n">ln_params</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)),</span> <span class="p">(</span><span class="o">.</span><span class="mi">75</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)),</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))]</span>
@@ -13595,8 +13547,8 @@ $$</p>
 <span class="n">flnl</span> <span class="o">=</span> <span class="p">[</span><span class="n">lognorm</span><span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">)</span> <span class="k">for</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">ln_params</span><span class="p">]</span>
 <span class="n">lnlbl</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="s1">&#39;$\mu = {np.log(p[2]):4.2f}$, $\sigma = </span><span class="si">{p[0]:4.2f}</span><span class="s1">$&#39;</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ln_params</span><span class="p">]</span>
 
-<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">flnl</span><span class="p">,</span> <span class="n">lnlbl</span><span class="p">,</span>
-           <span class="sa">r</span><span class="s1">&#39;$P(X | \mu, \sigma)$&#39;</span><span class="p">,</span> <span class="s2">&quot;LogNormal Distribution&quot;</span><span class="p">)</span>
+<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">flnl</span><span class="p">,</span> <span class="n">lnlbl</span><span class="p">,</span> 
+           <span class="s1">r&#39;$P(X | \mu, \sigma)$&#39;</span><span class="p">,</span> <span class="s2">&quot;LogNormal Distribution&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13607,11 +13559,7 @@ $$</p>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -15753,14 +15701,15 @@ IEdERERkpv4DGD2tXtDJpSUAAAAASUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="Power-Law">Power-Law<a class="anchor-link" href="#Power-Law">&#182;</a></h3><p>The <a href="https://en.wikipedia.org/wiki/Power_law#Power-law_probability_distributions"><em>Power-law</em></a> distribution is seen frequently in situations where there are many small items and fewer large items, or where physical conditions are determined by polynomial relations (like mass and height). A classic example is incomes for a large group of individuals, as there are many people with small incomes and very few with large incomes. Other examples include populations in cities, masses of different species, or frequencies of word counts. In addition, certain critical events, such as landslides, can be modeled by using a Power-law distribution. Finally, other distributions (including the <em>Pareto</em> or <em>Zipf</em> distributions) can be considered special cases of the general Power-law distribution.</p>
 <p>As a general form, we can consider a minimum cutoff ($x_{min}$), and a scaling exponent ($\alpha$).</p>
-<p>$$ P(x) = \frac{\alpha - 1}{x_{min}}\left(\frac{x}{x_{min}}\right)^{-\alpha} $$</p>
+$$ P(x) = \frac{\alpha - 1}{x_{min}}\left(\frac{x}{x_{min}}\right)^{-\alpha} $$<p></p>
 <p>To use a Power-law distribution in Python, we use the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.powerlaw.html"><code>powerlaw</code></a> object within the SciPy module. The SciPy <code>powerlaw</code> distribution takes a single, real valued argument, <code>a</code>, which must be greater than zero.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">powerlaw</span>
 
@@ -15770,10 +15719,9 @@ IEdERERkpv4DGD2tXtDJpSUAAAAASUVORK5CYII=
 <h3 id="Exponential">Exponential<a class="anchor-link" href="#Exponential">&#182;</a></h3><p>An <a href="http://en.wikipedia.org/wiki/Exponential_distribution"><em>Exponential</em></a> distribution describes the time between events that occur continuously and at a constant rate (i.e., a Poisson process). The Exponential distribution can be used to model decay of radioactive particles, the maximum rainfall in a set period of time, the time between telephone calls, and the time until a default in certain credit risk modeling.</p>
 <p>Note, even if a process generates events at a constant rate, the Exponential distribution can be applied over a time that the rate is nearly constant, for example, the time during which calls are generally made. One interesting result of the Exponential distribution is that the time to the next event (such as a phone call) is independent of the time since the last call. This property is formally known as being <strong>memoryless</strong>.</p>
 <p>Given a rate parameter: $\lambda$, we have the following probability density function for the Exponential distribution:</p>
-<p>$$
+$$
 P(x) = \lambda e^{- \lambda x}
-$$</p>
-<p>if $x \geq 0$ and zero otherwise. For this PDF, an Exponential distribution has mean value $\mu = \lambda^{-1}$  and variance $\sigma^2 = \lambda^{-2}$.</p>
+$$<p>if $x \geq 0$ and zero otherwise. For this PDF, an Exponential distribution has mean value $\mu = \lambda^{-1}$  and variance $\sigma^2 = \lambda^{-2}$.</p>
 <p>In Python, we use the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.expon.html"><code>expon</code></a> object within the SciPy module to generate and use Exponential distributions. To set the rate parameter for the <code>expon</code> object, you set the <code>scale</code> parameter to the inverse of the rate parameter:</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">expon</span>
 
@@ -15781,25 +15729,22 @@ $$</p>
 </pre></div>
 <p>In SciPy, this distribution is defined only for $x \geq 0$.</p>
 <h3 id="Pareto">Pareto<a class="anchor-link" href="#Pareto">&#182;</a></h3><p>A <a href="http://en.wikipedia.org/wiki/Pareto_distribution"><em>Pareto</em></a> distribution is a special case of the Power-law distribution, originally developed to describe the allocation of wealth, where 20% of the population was inferred to control 80% of the wealth. Thus, the Pareto distribution informally refers to distributions that follow the 80-20 rule (or a similar pre-defined allocation) with scale parameter $\alpha$.  This distribution can be used to model the sizes of human settlements, values in oil fields, sizes of sand particles, or the standardized price returns on individual stocks.</p>
-<p>Formally, for any $x &gt; x_m$, the probability density function for a Pareto distribution is given by
+<p>Formally, for any $x > x_m$, the probability density function for a Pareto distribution is given by
 $$
-P(X &gt; x) = \frac{\alpha x_m^{\alpha}}{x^{\alpha + 1}}
+P(X > x) = \frac{\alpha x_m^{\alpha}}{x^{\alpha + 1}}
 $$</p>
 <p>with mean value</p>
-<p>$$\mu = \frac{\alpha x_m}{\alpha - 1}$$</p>
-<p>and variance</p>
-<p>$$\sigma^2 = \frac{\alpha x_m^2}{(\alpha - 1)^2(\alpha - 2)}$$</p>
-<p>In Python, we use the <code>pareto</code> object within the SciPy module to generate and use Pareto distributions. To specify a scale parameter when creating this distribution, set the <code>b</code> parameter to the desired scale value.</p>
+$$\mu = \frac{\alpha x_m}{\alpha - 1}$$<p>and variance</p>
+$$\sigma^2 = \frac{\alpha x_m^2}{(\alpha - 1)^2(\alpha - 2)}$$<p>In Python, we use the <code>pareto</code> object within the SciPy module to generate and use Pareto distributions. To specify a scale parameter when creating this distribution, set the <code>b</code> parameter to the desired scale value.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">pareto</span>
 
 <span class="n">bd</span> <span class="o">=</span> <span class="n">pareto</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="mf">1.25</span><span class="p">)</span>
 </pre></div>
 <p>In SciPy, this distribution is only defined for $ x \geq 1$. To shift the distribution, the <code>loc</code> and <code>scale</code> parameters can be specified.</p>
 <h3 id="Cauchy">Cauchy<a class="anchor-link" href="#Cauchy">&#182;</a></h3><p>The <a href="https://en.wikipedia.org/wiki/Cauchy_distribution"><em>Cauchy</em></a> distribution appears when solving different physical conditions or mathematical expressions, and also results from the ratio of two independent normally distributed random variables. The Cauchy distribution is the canonical <strong>pathological</strong> distribution in that both the mean and variance for a Cauchy distribution are undefined. Formally, the probability density function for a Cauchy distribution is given by</p>
-<p>$$
+$$
 P(x) = \frac{1}{\pi \gamma}\left[\frac{\gamma^2}{(x - x_0)^2 + \gamma^2}\right]
-$$</p>
-<p>In Python, we generate and use a Cauchy distribution by using the <code>cauchy</code> object in the SciPy module. By default, $\gamma$ and $x_0$ are assumed to be one.</p>
+$$<p>In Python, we generate and use a Cauchy distribution by using the <code>cauchy</code> object in the SciPy module. By default, $\gamma$ and $x_0$ are assumed to be one.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">cauchy</span>
 
 <span class="n">cd</span> <span class="o">=</span> <span class="n">cauchy</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mf">1.25</span><span class="p">)</span>
@@ -15824,37 +15769,37 @@ $$</p>
 <span class="c1"># Compute and plot Scipy PowerLaw Distribution</span>
 <span class="n">pl_params</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="n">fpll</span> <span class="o">=</span> <span class="p">[</span><span class="n">powerlaw</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pl_params</span><span class="p">]</span>
-<span class="n">pllbl</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$\alpha = </span><span class="si">{0}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pl_params</span><span class="p">]</span>
+<span class="n">pllbl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">r&#39;$\alpha = </span><span class="si">{0}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pl_params</span><span class="p">]</span>
 
 <span class="c1"># Scale y-axis to be logarithmic for clarity</span>
 <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
 
-<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">fpll</span><span class="p">,</span> <span class="n">pllbl</span><span class="p">,</span>
-           <span class="sa">r</span><span class="s1">&#39;$P(X | \alpha)$&#39;</span><span class="p">,</span> <span class="s2">&quot;PowerLaw Distribution&quot;</span><span class="p">)</span>
+<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">fpll</span><span class="p">,</span> <span class="n">pllbl</span><span class="p">,</span> 
+           <span class="s1">r&#39;$P(X | \alpha)$&#39;</span><span class="p">,</span> <span class="s2">&quot;PowerLaw Distribution&quot;</span><span class="p">)</span>
 
 <span class="c1"># Compute and plot Exponential Distribution</span>
 <span class="n">e_params</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">fel</span> <span class="o">=</span> <span class="p">[</span><span class="n">expon</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">e_params</span><span class="p">]</span>
-<span class="n">elbl</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$\lambda =$ </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">e_params</span><span class="p">]</span>
+<span class="n">elbl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">r&#39;$\lambda =$ </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">e_params</span><span class="p">]</span>
 
-<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">fel</span><span class="p">,</span> <span class="n">elbl</span><span class="p">,</span>
-           <span class="sa">r</span><span class="s1">&#39;$P(X | \lambda)$&#39;</span><span class="p">,</span> <span class="s2">&quot;Exponential Distribution&quot;</span><span class="p">)</span>
+<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">fel</span><span class="p">,</span> <span class="n">elbl</span><span class="p">,</span> 
+           <span class="s1">r&#39;$P(X | \lambda)$&#39;</span><span class="p">,</span> <span class="s2">&quot;Exponential Distribution&quot;</span><span class="p">)</span>
 
 <span class="c1"># Compute and plot Pareto Distribution</span>
 <span class="n">p_params</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">fpl</span> <span class="o">=</span> <span class="p">[</span><span class="n">pareto</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">p_params</span><span class="p">]</span>
-<span class="n">plbl</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$\alpha = </span><span class="si">{0}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">p_params</span><span class="p">]</span>
+<span class="n">plbl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">r&#39;$\alpha = </span><span class="si">{0}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">p_params</span><span class="p">]</span>
 
-<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">fpl</span><span class="p">,</span> <span class="n">plbl</span><span class="p">,</span>
-           <span class="sa">r</span><span class="s1">&#39;$P(X | \alpha)$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;Pareto Distribution&quot;</span><span class="p">)</span>
+<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">fpl</span><span class="p">,</span> <span class="n">plbl</span><span class="p">,</span> 
+           <span class="s1">r&#39;$P(X | \alpha)$&#39;</span><span class="p">,</span> <span class="s2">r&quot;Pareto Distribution&quot;</span><span class="p">)</span>
 
 <span class="c1"># Compute and plot Cauchy Distribution</span>
 <span class="n">ca_params</span> <span class="o">=</span> <span class="p">[(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">),</span> <span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)]</span>
 <span class="n">fcal</span> <span class="o">=</span> <span class="p">[</span><span class="n">cauchy</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ca_params</span><span class="p">]</span>
-<span class="n">calbl</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$X_0 = </span><span class="si">{0}</span><span class="s1">$, $\gamma = </span><span class="si">{1}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ca_params</span><span class="p">]</span>
+<span class="n">calbl</span> <span class="o">=</span> <span class="p">[</span><span class="s1">r&#39;$X_0 = </span><span class="si">{0}</span><span class="s1">$, $\gamma = </span><span class="si">{1}</span><span class="s1">$&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ca_params</span><span class="p">]</span>
 
-<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">fcal</span><span class="p">,</span> <span class="n">calbl</span><span class="p">,</span>
-           <span class="sa">r</span><span class="s1">&#39;$P(X | X_0, \gamma)$&#39;</span><span class="p">,</span> <span class="s2">&quot;Cauchy Distribution&quot;</span><span class="p">)</span>
+<span class="n">make_plots</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="n">fcal</span><span class="p">,</span> <span class="n">calbl</span><span class="p">,</span> 
+           <span class="s1">r&#39;$P(X | X_0, \gamma)$&#39;</span><span class="p">,</span> <span class="s2">&quot;Cauchy Distribution&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15865,11 +15810,7 @@ $$</p>
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -17686,7 +17627,8 @@ SUVORK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -17709,11 +17651,11 @@ SUVORK5CYII=
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
 
-<span class="n">axs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">nd</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
+<span class="n">axs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">nd</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> 
          <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Model PDF&#39;</span><span class="p">)</span>
-
+    
 <span class="n">data</span> <span class="o">=</span> <span class="n">nd</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
-<span class="n">axs</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span>
+<span class="n">axs</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> 
          <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Binned Random Data&#39;</span><span class="p">)</span>
 
 <span class="n">axs</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
@@ -17722,7 +17664,7 @@ SUVORK5CYII=
 <span class="n">axs</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Random Draw from Normal PDF&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 
 <span class="n">axs</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">offset</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">trim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">offset</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">trim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>    
 </pre></div>
 
 </div>
@@ -17733,11 +17675,7 @@ SUVORK5CYII=
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -18303,11 +18241,11 @@ AACABKN0AwAAAAlG6QYAAAASjNINAAAAJBilGwAAAEiw/w94WFRfEQ/dtAAAAABJRU5ErkJggg==
     <span class="n">ed</span> <span class="o">=</span> <span class="n">expon</span><span class="p">(</span><span class="n">lam</span><span class="p">)</span>
 
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-    <span class="n">axs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ed</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ed</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> 
              <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Model PDF&#39;</span><span class="p">)</span>
-
+    
     <span class="n">data</span> <span class="o">=</span> <span class="n">ed</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
-    <span class="n">axs</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> 
              <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Binned Random Data&#39;</span><span class="p">)</span>
 
     <span class="n">axs</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
@@ -18317,7 +18255,7 @@ AACABKN0AwAAAAlG6QYAAAASjNINAAAAJBilGwAAAEiw/w94WFRfEQ/dtAAAAABJRU5ErkJggg==
 
     <span class="n">axs</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
     <span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">offset</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">trim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
+    
 <span class="c1"># We plot the first one normally</span>
 <span class="n">plot_exp</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
@@ -18334,11 +18272,7 @@ AACABKN0AwAAAAlG6QYAAAASjNINAAAAJBilGwAAAEiw/w94WFRfEQ/dtAAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -19225,7 +19159,8 @@ RK5CYII=
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -19238,13 +19173,10 @@ RK5CYII=
 <li>Inverse survival function.</li>
 </ol>
 <p>The <a href="https://en.wikipedia.org/wiki/Cumulative_distribution_function">cumulative distribution function</a> specifies the probability that a real-valued random variable will have a value less than or equal to a specific value, $x$. Thus, for a continuous distribution, the CDF is the area under the PDF from minus infinity to $x$. The CDF is used frequently in hypothesis testing and in Monte Carlo integration, and is given by the following expression, where $f_X(x)$ is a function evaluated at $x$ of the real valued, random variable $X$.</p>
-<p>$$ F_X(x) = P(X \leq x) = \int_{-\infty}^x f(u)\ du$$</p>
-<p>One important result that follows from this definition is that the cumulative probability between two limits $(a, b]$ is given by the difference in the CDF evaluated at these two points:</p>
-<p>$$ P(a &lt; X \leq b) = F_X(b) - F_X(a)$$</p>
-<p>The <a href="https://en.wikipedia.org/wiki/Quantile_function">percent point function</a> of a real-valued, random variable $x$, alternatively known as the quantile function or inverse cumulative distribution function, specifies the value of random variable at which the probability of getting $x$ is less than or equal to the given probability. Alternatively, you can view this function as stating the value of $x$ for which the CDF has a specific value $p$. Thus in a simple one-dimensional example, given a probability, $p$, the PPF indicates the value $x$ at which the PDF has probability equal to or less than the target probability $p$. The PPF can be useful in determining quantiles, quartiles, and the median, and also in random number generation.</p>
+$$ F_X(x) = P(X \leq x) = \int_{-\infty}^x f(u)\ du$$<p>One important result that follows from this definition is that the cumulative probability between two limits $(a, b]$ is given by the difference in the CDF evaluated at these two points:</p>
+$$ P(a < X \leq b) = F_X(b) - F_X(a)$$<p>The <a href="https://en.wikipedia.org/wiki/Quantile_function">percent point function</a> of a real-valued, random variable $x$, alternatively known as the quantile function or inverse cumulative distribution function, specifies the value of random variable at which the probability of getting $x$ is less than or equal to the given probability. Alternatively, you can view this function as stating the value of $x$ for which the CDF has a specific value $p$. Thus in a simple one-dimensional example, given a probability, $p$, the PPF indicates the value $x$ at which the PDF has probability equal to or less than the target probability $p$. The PPF can be useful in determining quantiles, quartiles, and the median, and also in random number generation.</p>
 <p>The <a href="https://en.wikipedia.org/wiki/Survival_function">survival function</a>, $S(t)$, gives the probability that a real-valued random variable will exceed a specific value $x$. Often the variable is time, and the survival function indicates the probability an item, such as a mechanical device, a patient, or other item will last (or survive) beyond a given time. This function is given by $1 - CDF$.</p>
-<p>$$ S(t) = P( T &gt; t) = \int_t^{\infty} f(u)\ du = 1 - F(t)$$</p>
-<p>The inverse of this function, called the <a href="https://en.wikipedia.org/wiki/Survival_function">inverse survival function</a>, gives the real-valued random variable at which the probability of surviving is less than or equal to the target probability $p$.</p>
+$$ S(t) = P( T > t) = \int_t^{\infty} f(u)\ du = 1 - F(t)$$<p>The inverse of this function, called the <a href="https://en.wikipedia.org/wiki/Survival_function">inverse survival function</a>, gives the real-valued random variable at which the probability of surviving is less than or equal to the target probability $p$.</p>
 <p>The following code cell displays these four functions, along with the probability density function (PDF) for a Normal distribution. In addition, the standard quartiles are displayed to provide an additional reference point in interpreting these other distribution forms.</p>
 <hr>
 
@@ -19347,11 +19279,7 @@ RK5CYII=
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -21190,7 +21118,8 @@ AAAkSBAAAIAECQIAAJAgQQAAABL0C4TbZm9mIEssAAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -21202,7 +21131,21 @@ AAAkSBAAAIAECQIAAJAgQQAAABL0C4TbZm9mIEssAAAAAElFTkSuQmCC
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -21215,9 +21158,8 @@ AAAkSBAAAIAECQIAAJAgQQAAABL0C4TbZm9mIEssAAAAAElFTkSuQmCC
 <li>the mean ($\mu$) and standard deviation ($\sigma$) of the data points are finite,</li>
 </ol>
 <p>then the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem"><strong>Central Limit Theorem</strong></a>, or (<strong>CLT</strong>) states that the sample average of these data points is Normally distributed with mean ($\mu$) and variance ($\sigma^2/n$):</p>
-<p>$$P\left(x = \frac{1}{n}\sum_i^n x_i \right) \rightarrow
-\sqrt{\frac{n}{2 \pi \sigma^2}}\exp{\left(-\frac{n (x - \mu)^2}{2 \sigma^2} \right)} $$</p>
-<p>The first two items in the previous list are often shortened to <strong>iid</strong>, which is an abbreviation for <em>independent and identical distributed</em>. This theorem essentially implies that sums of random quantities will be approximately distributed as a normal distribution, with the accuracy of the approximation determined by the number of points ($n$). In addition, the CLT often leads analysts to <em>average out the noise</em> and to <em>assume a Normal model</em>. While these conditions are often met, and thus the last two steps are valid, one should always exert caution and be sure that all conditions are met before jumping to strong assumptions.</p>
+$$P\left(x = \frac{1}{n}\sum_i^n x_i \right) \rightarrow 
+\sqrt{\frac{n}{2 \pi \sigma^2}}\exp{\left(-\frac{n (x - \mu)^2}{2 \sigma^2} \right)} $$<p>The first two items in the previous list are often shortened to <strong>iid</strong>, which is an abbreviation for <em>independent and identical distributed</em>. This theorem essentially implies that sums of random quantities will be approximately distributed as a normal distribution, with the accuracy of the approximation determined by the number of points ($n$). In addition, the CLT often leads analysts to <em>average out the noise</em> and to <em>assume a Normal model</em>. While these conditions are often met, and thus the last two steps are valid, one should always exert caution and be sure that all conditions are met before jumping to strong assumptions.</p>
 <p>The CLT is demonstrated in the following code cell, where we repeatedly simulate the process of flipping ten coins. By progressively increasing the number of samples that we accumulate, we can see that as $n$ increases our data set becomes increasingly well modeled by a Normal distribution.</p>
 <hr>
 
@@ -21241,33 +21183,33 @@ AAAkSBAAAIAECQIAAJAgQQAAABL0C4TbZm9mIEssAAAAAElFTkSuQmCC
 
     <span class="c1"># Build an array of coin flips</span>
     <span class="n">flips</span> <span class="o">=</span> <span class="n">binom</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">trails</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">times</span><span class="p">)</span>
-
+    
     <span class="c1"># Now histogram them, two bins, heads or tails</span>
     <span class="n">results</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">flips</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">trails</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
-
+    
     <span class="c1"># For simplicity turn into a Pandas Series.</span>
     <span class="n">coins</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
-
+  
     <span class="c1"># Now plot the coin flip results</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">coins</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.75</span><span class="p">,</span>
-                        <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                        <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
                         <span class="n">xticks</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">yticks</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
-
+    
     <span class="k">if</span> <span class="n">times</span> <span class="o">//</span> <span class="n">trails</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">title</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;</span><span class="si">{trails}</span><span class="s1"> coins: {times // trails} flips each&#39;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">title</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;</span><span class="si">{trails}</span><span class="s1"> coins: {times // trails} flip each&#39;</span>
-
+    
     <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Probability&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
-
+    
     <span class="c1"># Now make a Gaussian and overplot.</span>
     <span class="n">mu</span> <span class="o">=</span> <span class="n">trails</span> <span class="o">*</span> <span class="n">p</span>
     <span class="n">sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">trails</span> <span class="o">*</span> <span class="n">p</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p</span><span class="p">))</span>
     <span class="n">norm</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">norm</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">1.</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mf">2.</span> <span class="o">*</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">,</span> 
             <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.75</span><span class="p">)</span>
 
     <span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">trim</span><span class="o">=</span><span class="s1">&#39;True&#39;</span><span class="p">,</span> <span class="n">left</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -21291,11 +21233,7 @@ AAAkSBAAAIAECQIAAJAgQQAAABL0C4TbZm9mIEssAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -22427,7 +22365,8 @@ RH6MHXYiIiIiIj/GDjsRERERkR9jh52IiIiIyI+xw05ERERE5MfYYSciIiIi8mPssBMRERER+TF2
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -22477,11 +22416,7 @@ RH6MHXYiIiIiIj/GDjsRERERkR9jh52IiIiIyI+xw05ERERE5MfYYSciIiIi8mPssBMRERER+TF2
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -23094,11 +23029,7 @@ SoKIiIjKxMBAREREZWJgICIiojIxMBAREVGZGBiIiIioTAwMREREVCYGBiIiIioTAwMRERGV6f8B
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -23680,7 +23611,8 @@ RKTS/wMzlJaXROqRbQAAAABJRU5ErkJggg==
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -23720,15 +23652,15 @@ RKTS/wMzlJaXROqRbQAAAABJRU5ErkJggg==
 <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
 
 <span class="c1"># Plot Fit</span>
-<span class="n">axs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fit_dist</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
+<span class="n">axs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fit_dist</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> 
          <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Fit PDF&#39;</span><span class="p">)</span>
 
 <span class="c1"># Plot Model</span>
-<span class="n">axs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
+<span class="n">axs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> 
          <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Model PDF&#39;</span><span class="p">)</span>
 
 <span class="c1"># Plot data</span>
-<span class="n">axs</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span>
+<span class="n">axs</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> 
          <span class="n">color</span><span class="o">=</span><span class="n">g_colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Binned Random Data&#39;</span><span class="p">)</span>
 
 <span class="n">axs</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
@@ -23737,7 +23669,7 @@ RKTS/wMzlJaXROqRbQAAAABJRU5ErkJggg==
 <span class="n">axs</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Distribution fitting example&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 
 <span class="n">axs</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">offset</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">trim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">offset</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">trim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>    
 </pre></div>
 
 </div>
@@ -23748,11 +23680,7 @@ RKTS/wMzlJaXROqRbQAAAABJRU5ErkJggg==
 <div class="output">
 
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Model Mean =  -1.50
 Model Std  =   1.25
@@ -23764,11 +23692,7 @@ Fit Std  =  1.218
 </div>
 </div>
 
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -24640,7 +24564,8 @@ iIiISDunpF5EREREpJ37/5XOXpJIdWm8AAAAAElFTkSuQmCC
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -24652,7 +24577,21 @@ iIiISDunpF5EREREpJ37/5XOXpJIdWm8AAAAAElFTkSuQmCC
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -24668,7 +24607,8 @@ iIiISDunpF5EREREpJ37/5XOXpJIdWm8AAAAAElFTkSuQmCC
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -24681,8 +24621,4 @@ iIiISDunpF5EREREpJ37/5XOXpJIdWm8AAAAAElFTkSuQmCC
     </div>
   </div>
 </body>
-
-
-
-
 </html>
