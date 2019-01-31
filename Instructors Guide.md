@@ -110,3 +110,10 @@ By the end of this module, you should be able to:
 - sample from a density estimate model to generate new data.
 
 -----
+
+**&copy; 2018-2019: Robert J. Brunner at the University of Illinois.**
+This notebook is released under the [Creative Commons license CC BY-NC-SA 4.0][ll]. Any reproduction, adaptation, distribution, dissemination or making available of this notebook for commercial use is not allowed unless authorized in writing by the copyright holder.
+
+-----
+
+[ll]: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
