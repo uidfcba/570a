@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
+
 <title>intro2numpy</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
 
 <style type="text/css">
     /*!
@@ -13,8 +16,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -201,7 +204,6 @@ th {
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -1109,7 +1111,6 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2538,7 +2539,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3029,7 +3029,6 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -6749,15 +6748,15 @@ button.close {
 *
 */
 /*!
- *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6814,6 +6813,19 @@ button.close {
   border: solid 0.08em #eee;
   border-radius: .1em;
 }
+.fa-pull-left {
+  float: left;
+}
+.fa-pull-right {
+  float: right;
+}
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
 .pull-right {
   float: right;
 }
@@ -6829,6 +6841,10 @@ button.close {
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
+}
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
 }
 @-webkit-keyframes fa-spin {
   0% {
@@ -6851,31 +6867,31 @@ button.close {
   }
 }
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -7360,6 +7376,7 @@ button.close {
 .fa-twitter:before {
   content: "\f099";
 }
+.fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
 }
@@ -7372,6 +7389,7 @@ button.close {
 .fa-credit-card:before {
   content: "\f09d";
 }
+.fa-feed:before,
 .fa-rss:before {
   content: "\f09e";
 }
@@ -8009,7 +8027,8 @@ button.close {
 .fa-male:before {
   content: "\f183";
 }
-.fa-gittip:before {
+.fa-gittip:before,
+.fa-gratipay:before {
   content: "\f184";
 }
 .fa-sun-o:before {
@@ -8113,7 +8132,7 @@ button.close {
 .fa-digg:before {
   content: "\f1a6";
 }
-.fa-pied-piper:before {
+.fa-pied-piper-pp:before {
   content: "\f1a7";
 }
 .fa-pied-piper-alt:before {
@@ -8239,6 +8258,7 @@ button.close {
   content: "\f1ce";
 }
 .fa-ra:before,
+.fa-resistance:before,
 .fa-rebel:before {
   content: "\f1d0";
 }
@@ -8252,6 +8272,8 @@ button.close {
 .fa-git:before {
   content: "\f1d3";
 }
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
 .fa-hacker-news:before {
   content: "\f1d4";
 }
@@ -8419,6 +8441,657 @@ button.close {
 }
 .fa-meanpath:before {
   content: "\f20c";
+}
+.fa-buysellads:before {
+  content: "\f20d";
+}
+.fa-connectdevelop:before {
+  content: "\f20e";
+}
+.fa-dashcube:before {
+  content: "\f210";
+}
+.fa-forumbee:before {
+  content: "\f211";
+}
+.fa-leanpub:before {
+  content: "\f212";
+}
+.fa-sellsy:before {
+  content: "\f213";
+}
+.fa-shirtsinbulk:before {
+  content: "\f214";
+}
+.fa-simplybuilt:before {
+  content: "\f215";
+}
+.fa-skyatlas:before {
+  content: "\f216";
+}
+.fa-cart-plus:before {
+  content: "\f217";
+}
+.fa-cart-arrow-down:before {
+  content: "\f218";
+}
+.fa-diamond:before {
+  content: "\f219";
+}
+.fa-ship:before {
+  content: "\f21a";
+}
+.fa-user-secret:before {
+  content: "\f21b";
+}
+.fa-motorcycle:before {
+  content: "\f21c";
+}
+.fa-street-view:before {
+  content: "\f21d";
+}
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+.fa-venus:before {
+  content: "\f221";
+}
+.fa-mars:before {
+  content: "\f222";
+}
+.fa-mercury:before {
+  content: "\f223";
+}
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "\f224";
+}
+.fa-transgender-alt:before {
+  content: "\f225";
+}
+.fa-venus-double:before {
+  content: "\f226";
+}
+.fa-mars-double:before {
+  content: "\f227";
+}
+.fa-venus-mars:before {
+  content: "\f228";
+}
+.fa-mars-stroke:before {
+  content: "\f229";
+}
+.fa-mars-stroke-v:before {
+  content: "\f22a";
+}
+.fa-mars-stroke-h:before {
+  content: "\f22b";
+}
+.fa-neuter:before {
+  content: "\f22c";
+}
+.fa-genderless:before {
+  content: "\f22d";
+}
+.fa-facebook-official:before {
+  content: "\f230";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-whatsapp:before {
+  content: "\f232";
+}
+.fa-server:before {
+  content: "\f233";
+}
+.fa-user-plus:before {
+  content: "\f234";
+}
+.fa-user-times:before {
+  content: "\f235";
+}
+.fa-hotel:before,
+.fa-bed:before {
+  content: "\f236";
+}
+.fa-viacoin:before {
+  content: "\f237";
+}
+.fa-train:before {
+  content: "\f238";
+}
+.fa-subway:before {
+  content: "\f239";
+}
+.fa-medium:before {
+  content: "\f23a";
+}
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "\f23b";
+}
+.fa-optin-monster:before {
+  content: "\f23c";
+}
+.fa-opencart:before {
+  content: "\f23d";
+}
+.fa-expeditedssl:before {
+  content: "\f23e";
+}
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "\f240";
+}
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "\f241";
+}
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "\f242";
+}
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "\f243";
+}
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "\f244";
+}
+.fa-mouse-pointer:before {
+  content: "\f245";
+}
+.fa-i-cursor:before {
+  content: "\f246";
+}
+.fa-object-group:before {
+  content: "\f247";
+}
+.fa-object-ungroup:before {
+  content: "\f248";
+}
+.fa-sticky-note:before {
+  content: "\f249";
+}
+.fa-sticky-note-o:before {
+  content: "\f24a";
+}
+.fa-cc-jcb:before {
+  content: "\f24b";
+}
+.fa-cc-diners-club:before {
+  content: "\f24c";
+}
+.fa-clone:before {
+  content: "\f24d";
+}
+.fa-balance-scale:before {
+  content: "\f24e";
+}
+.fa-hourglass-o:before {
+  content: "\f250";
+}
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "\f251";
+}
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "\f252";
+}
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "\f253";
+}
+.fa-hourglass:before {
+  content: "\f254";
+}
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "\f255";
+}
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "\f256";
+}
+.fa-hand-scissors-o:before {
+  content: "\f257";
+}
+.fa-hand-lizard-o:before {
+  content: "\f258";
+}
+.fa-hand-spock-o:before {
+  content: "\f259";
+}
+.fa-hand-pointer-o:before {
+  content: "\f25a";
+}
+.fa-hand-peace-o:before {
+  content: "\f25b";
+}
+.fa-trademark:before {
+  content: "\f25c";
+}
+.fa-registered:before {
+  content: "\f25d";
+}
+.fa-creative-commons:before {
+  content: "\f25e";
+}
+.fa-gg:before {
+  content: "\f260";
+}
+.fa-gg-circle:before {
+  content: "\f261";
+}
+.fa-tripadvisor:before {
+  content: "\f262";
+}
+.fa-odnoklassniki:before {
+  content: "\f263";
+}
+.fa-odnoklassniki-square:before {
+  content: "\f264";
+}
+.fa-get-pocket:before {
+  content: "\f265";
+}
+.fa-wikipedia-w:before {
+  content: "\f266";
+}
+.fa-safari:before {
+  content: "\f267";
+}
+.fa-chrome:before {
+  content: "\f268";
+}
+.fa-firefox:before {
+  content: "\f269";
+}
+.fa-opera:before {
+  content: "\f26a";
+}
+.fa-internet-explorer:before {
+  content: "\f26b";
+}
+.fa-tv:before,
+.fa-television:before {
+  content: "\f26c";
+}
+.fa-contao:before {
+  content: "\f26d";
+}
+.fa-500px:before {
+  content: "\f26e";
+}
+.fa-amazon:before {
+  content: "\f270";
+}
+.fa-calendar-plus-o:before {
+  content: "\f271";
+}
+.fa-calendar-minus-o:before {
+  content: "\f272";
+}
+.fa-calendar-times-o:before {
+  content: "\f273";
+}
+.fa-calendar-check-o:before {
+  content: "\f274";
+}
+.fa-industry:before {
+  content: "\f275";
+}
+.fa-map-pin:before {
+  content: "\f276";
+}
+.fa-map-signs:before {
+  content: "\f277";
+}
+.fa-map-o:before {
+  content: "\f278";
+}
+.fa-map:before {
+  content: "\f279";
+}
+.fa-commenting:before {
+  content: "\f27a";
+}
+.fa-commenting-o:before {
+  content: "\f27b";
+}
+.fa-houzz:before {
+  content: "\f27c";
+}
+.fa-vimeo:before {
+  content: "\f27d";
+}
+.fa-black-tie:before {
+  content: "\f27e";
+}
+.fa-fonticons:before {
+  content: "\f280";
+}
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+.fa-edge:before {
+  content: "\f282";
+}
+.fa-credit-card-alt:before {
+  content: "\f283";
+}
+.fa-codiepie:before {
+  content: "\f284";
+}
+.fa-modx:before {
+  content: "\f285";
+}
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+.fa-usb:before {
+  content: "\f287";
+}
+.fa-product-hunt:before {
+  content: "\f288";
+}
+.fa-mixcloud:before {
+  content: "\f289";
+}
+.fa-scribd:before {
+  content: "\f28a";
+}
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+.fa-pause-circle-o:before {
+  content: "\f28c";
+}
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+.fa-stop-circle-o:before {
+  content: "\f28e";
+}
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+.fa-hashtag:before {
+  content: "\f292";
+}
+.fa-bluetooth:before {
+  content: "\f293";
+}
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+.fa-percent:before {
+  content: "\f295";
+}
+.fa-gitlab:before {
+  content: "\f296";
+}
+.fa-wpbeginner:before {
+  content: "\f297";
+}
+.fa-wpforms:before {
+  content: "\f298";
+}
+.fa-envira:before {
+  content: "\f299";
+}
+.fa-universal-access:before {
+  content: "\f29a";
+}
+.fa-wheelchair-alt:before {
+  content: "\f29b";
+}
+.fa-question-circle-o:before {
+  content: "\f29c";
+}
+.fa-blind:before {
+  content: "\f29d";
+}
+.fa-audio-description:before {
+  content: "\f29e";
+}
+.fa-volume-control-phone:before {
+  content: "\f2a0";
+}
+.fa-braille:before {
+  content: "\f2a1";
+}
+.fa-assistive-listening-systems:before {
+  content: "\f2a2";
+}
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "\f2a3";
+}
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "\f2a4";
+}
+.fa-glide:before {
+  content: "\f2a5";
+}
+.fa-glide-g:before {
+  content: "\f2a6";
+}
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "\f2a7";
+}
+.fa-low-vision:before {
+  content: "\f2a8";
+}
+.fa-viadeo:before {
+  content: "\f2a9";
+}
+.fa-viadeo-square:before {
+  content: "\f2aa";
+}
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+.fa-snapchat-ghost:before {
+  content: "\f2ac";
+}
+.fa-snapchat-square:before {
+  content: "\f2ad";
+}
+.fa-pied-piper:before {
+  content: "\f2ae";
+}
+.fa-first-order:before {
+  content: "\f2b0";
+}
+.fa-yoast:before {
+  content: "\f2b1";
+}
+.fa-themeisle:before {
+  content: "\f2b2";
+}
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "\f2b3";
+}
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "\f2b4";
+}
+.fa-handshake-o:before {
+  content: "\f2b5";
+}
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+.fa-envelope-open-o:before {
+  content: "\f2b7";
+}
+.fa-linode:before {
+  content: "\f2b8";
+}
+.fa-address-book:before {
+  content: "\f2b9";
+}
+.fa-address-book-o:before {
+  content: "\f2ba";
+}
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "\f2bb";
+}
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "\f2bc";
+}
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+.fa-user-circle-o:before {
+  content: "\f2be";
+}
+.fa-user-o:before {
+  content: "\f2c0";
+}
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "\f2c2";
+}
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "\f2c3";
+}
+.fa-quora:before {
+  content: "\f2c4";
+}
+.fa-free-code-camp:before {
+  content: "\f2c5";
+}
+.fa-telegram:before {
+  content: "\f2c6";
+}
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "\f2c7";
+}
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "\f2c8";
+}
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "\f2c9";
+}
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "\f2ca";
+}
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "\f2cb";
+}
+.fa-shower:before {
+  content: "\f2cc";
+}
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "\f2cd";
+}
+.fa-podcast:before {
+  content: "\f2ce";
+}
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "\f2d3";
+}
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "\f2d4";
+}
+.fa-bandcamp:before {
+  content: "\f2d5";
+}
+.fa-grav:before {
+  content: "\f2d6";
+}
+.fa-etsy:before {
+  content: "\f2d7";
+}
+.fa-imdb:before {
+  content: "\f2d8";
+}
+.fa-ravelry:before {
+  content: "\f2d9";
+}
+.fa-eercast:before {
+  content: "\f2da";
+}
+.fa-microchip:before {
+  content: "\f2db";
+}
+.fa-snowflake-o:before {
+  content: "\f2dc";
+}
+.fa-superpowers:before {
+  content: "\f2dd";
+}
+.fa-wpexplorer:before {
+  content: "\f2de";
+}
+.fa-meetup:before {
+  content: "\f2e0";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 /*!
 *
@@ -8699,6 +9372,10 @@ div.traceback-wrapper {
   max-width: 800px;
   margin: auto;
 }
+div.traceback-wrapper pre.traceback {
+  max-height: 600px;
+  overflow: auto;
+}
 /**
  * Primary styles
  *
@@ -8724,6 +9401,10 @@ body > #header {
   z-index: 100;
 }
 body > #header #header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
   box-sizing: border-box;
@@ -8755,10 +9436,16 @@ body > #header .header-bar {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-@media (max-width: 991px) {
-  #ipython_notebook {
-    margin-left: 10px;
-  }
+[dir="rtl"] #ipython_notebook {
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="rtl"] #ipython_notebook.pull-left {
+  float: right !important;
+  float: right;
+}
+.flex-spacer {
+  flex: 1;
 }
 #noscript {
   width: auto;
@@ -8793,8 +9480,14 @@ body > #header .header-bar {
 input.ui-button {
   padding: 0.3em 0.9em;
 }
+span#kernel_logo_widget {
+  margin: 0 10px;
+}
 span#login_widget {
   float: right;
+}
+[dir="rtl"] span#login_widget {
+  float: left;
 }
 span#login_widget > .button,
 #logout {
@@ -8910,6 +9603,9 @@ span#login_widget > .button .badge,
   overflow: auto;
   flex: 1;
 }
+.modal-header {
+  cursor: move;
+}
 @media (min-width: 768px) {
   .modal .modal-dialog {
     width: 700px;
@@ -8930,6 +9626,19 @@ span#login_widget > .button .badge,
   display: inline-block;
   margin-bottom: -4px;
 }
+[dir="rtl"] .center-nav form.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] .center-nav .navbar-text {
+  float: right;
+}
+[dir="rtl"] .navbar-inner {
+  text-align: right;
+}
+[dir="rtl"] div.text-left {
+  text-align: right;
+}
 /*!
 *
 * IPython tree view
@@ -8946,16 +9655,24 @@ span#login_widget > .button .badge,
   margin: 0;
 }
 .alternate_upload input.fileinput {
-  text-align: center;
-  vertical-align: middle;
-  display: inline;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
   opacity: 0;
   z-index: 2;
-  width: 12ex;
-  margin-right: -12ex;
+}
+.alternate_upload .btn-xs > input.fileinput {
+  margin: -1px -5px;
 }
 .alternate_upload .btn-upload {
+  position: relative;
   height: 22px;
+}
+::-webkit-file-upload-button {
+  cursor: pointer;
 }
 /**
  * Primary styles
@@ -8968,6 +9685,12 @@ ul#tabs {
 ul#tabs a {
   padding-top: 6px;
   padding-bottom: 4px;
+}
+[dir="rtl"] ul#tabs.nav-tabs > li {
+  float: right;
+}
+[dir="rtl"] ul#tabs.nav.nav-tabs {
+  padding-right: 0;
 }
 ul.breadcrumb a:focus,
 ul.breadcrumb a:hover {
@@ -8986,6 +9709,14 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
+}
+[dir="rtl"] .list_toolbar .tree-buttons .pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .list_toolbar .col-sm-4,
+[dir="rtl"] .list_toolbar .col-sm-8 {
+  float: right;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9041,7 +9772,7 @@ ul.breadcrumb span {
 .list_item > div input {
   margin-right: 7px;
   margin-left: 14px;
-  vertical-align: baseline;
+  vertical-align: text-bottom;
   line-height: 22px;
   position: relative;
   top: -1px;
@@ -9051,6 +9782,9 @@ ul.breadcrumb span {
   margin-left: -1px;
   vertical-align: baseline;
   line-height: 22px;
+}
+[dir="rtl"] .list_item > div input {
+  margin-right: 0;
 }
 .new-file input[type=checkbox] {
   visibility: hidden;
@@ -9066,6 +9800,14 @@ ul.breadcrumb span {
   margin-left: 7px;
   line-height: 22px;
   vertical-align: baseline;
+}
+.item_modified {
+  margin-right: 7px;
+  margin-left: 7px;
+}
+[dir="rtl"] .item_modified.pull-right {
+  float: left !important;
+  float: left;
 }
 .item_buttons {
   line-height: 1em;
@@ -9094,6 +9836,14 @@ ul.breadcrumb span {
   margin-right: 7px;
   float: left;
 }
+[dir="rtl"] .item_buttons.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .item_buttons .kernel-name {
+  margin-left: 7px;
+  float: right;
+}
 .toolbar_info {
   height: 24px;
   line-height: 24px;
@@ -9119,15 +9869,32 @@ ul.breadcrumb span {
   background-color: transparent;
   font-weight: bold;
 }
+.sort_button {
+  display: inline-block;
+  padding-left: 7px;
+}
+[dir="rtl"] .sort_button.pull-right {
+  float: left !important;
+  float: left;
+}
 #tree-selector {
   padding-right: 0px;
 }
 #button-select-all {
   min-width: 50px;
 }
+[dir="rtl"] #button-select-all.btn {
+  float: right ;
+}
 #select-all {
   margin-left: 7px;
   margin-right: 2px;
+  margin-top: 2px;
+  height: 16px;
+}
+[dir="rtl"] #select-all.pull-left {
+  float: right !important;
+  float: right;
 }
 .menu_icon {
   margin-right: 2px;
@@ -9145,6 +9912,12 @@ ul.breadcrumb span {
   -moz-osx-font-smoothing: grayscale;
   content: "\f114";
 }
+.folder_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.folder_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .folder_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9161,6 +9934,12 @@ ul.breadcrumb span {
   content: "\f02d";
   position: relative;
   top: -1px;
+}
+.notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .notebook_icon:before.pull-left {
   margin-right: .3em;
@@ -9180,6 +9959,12 @@ ul.breadcrumb span {
   top: -1px;
   color: #5cb85c;
 }
+.running_notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.running_notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .running_notebook_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9197,6 +9982,12 @@ ul.breadcrumb span {
   position: relative;
   top: -2px;
 }
+.file_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.file_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .file_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9210,6 +10001,12 @@ ul.breadcrumb span {
 ul#new-menu {
   left: auto;
   right: 0;
+}
+#new-menu .dropdown-header {
+  font-size: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0 3px;
+  margin: -3px 20px 0;
 }
 .kernel-menu-icon {
   padding-right: 12px;
@@ -9265,6 +10062,12 @@ ul#new-menu {
 .rename-button {
   display: none;
 }
+.move-button {
+  display: none;
+}
+.download-button {
+  display: none;
+}
 .shutdown-button {
   display: none;
 }
@@ -9305,6 +10108,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator.pull-left {
   margin-right: .3em;
 }
@@ -9319,6 +10128,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
+}
+.dirty-indicator-dirty.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-dirty.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-dirty.pull-left {
   margin-right: .3em;
@@ -9335,6 +10150,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator-clean.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator-clean.pull-left {
   margin-right: .3em;
 }
@@ -9349,6 +10170,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f00c";
+}
+.dirty-indicator-clean:before.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean:before.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-clean:before.pull-left {
   margin-right: .3em;
@@ -9394,14 +10221,132 @@ ul#new-menu {
     box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
   }
 }
+.CodeMirror-dialog {
+  background-color: #fff;
+}
 /*!
 *
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI colors. */
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
 .ansibold {
   font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -9480,12 +10425,20 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
 }
 div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -9498,27 +10451,39 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected {
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
   border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
 }
 @media print {
-  div.cell.selected {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -9551,6 +10516,7 @@ div.cell.selected.jupyter-soft-selected {
   }
 }
 div.inner_cell {
+  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -9571,11 +10537,6 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
-}
-@-moz-document url-prefix() {
-  div.inner_cell {
-    overflow-x: hidden;
-  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -9718,7 +10679,9 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -9728,11 +10691,24 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
   border: 0;
   border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
 }
 /*
 
@@ -9986,6 +10962,9 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
+div.output_area .mglyph > img {
+  max-width: none;
+}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -10024,7 +11003,7 @@ div.output_area svg.unconfined {
 }
 div.output_area pre {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -10184,39 +11163,35 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
 .rendered_html ul {
   list-style: disc;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ul ul {
   list-style: square;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ul ul ul {
   list-style: circle;
-  margin: 0em 2em;
 }
 .rendered_html ol {
   list-style: decimal;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ol ol {
   list-style: upper-alpha;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ol ol ol {
   list-style: lower-alpha;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol {
   list-style: lower-roman;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol ol {
   list-style: decimal;
-  margin: 0em 2em;
 }
 .rendered_html * + ul {
   margin-top: 1em;
@@ -10230,14 +11205,23 @@ div.output_unrecognized a:hover {
 }
 .rendered_html pre {
   margin: 1em 2em;
+  padding: 0px;
+  background-color: #fff;
+}
+.rendered_html code {
+  background-color: #eff0f1;
+}
+.rendered_html p code {
+  padding: 1px 5px;
+}
+.rendered_html pre code {
+  background-color: #fff;
 }
 .rendered_html pre,
 .rendered_html code {
   border: 0;
-  background-color: #fff;
   color: #000;
   font-size: 100%;
-  padding: 0px;
 }
 .rendered_html blockquote {
   margin: 1em 2em;
@@ -10245,24 +11229,36 @@ div.output_unrecognized a:hover {
 .rendered_html table {
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: none;
   border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
 }
 .rendered_html tr,
 .rendered_html th,
 .rendered_html td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin: 1em 2em;
-}
-.rendered_html td,
-.rendered_html th {
-  text-align: left;
+  text-align: right;
   vertical-align: middle;
-  padding: 4px;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
 }
 .rendered_html th {
   font-weight: bold;
+}
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
 }
 .rendered_html * + table {
   margin-top: 1em;
@@ -10289,6 +11285,15 @@ div.output_unrecognized a:hover {
 .rendered_html img.unconfined,
 .rendered_html svg.unconfined {
   max-width: none;
+}
+.rendered_html .alert {
+  margin-bottom: initial;
+}
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] .rendered_html p {
+  text-align: right;
 }
 div.text_cell {
   /* Old browsers */
@@ -10343,8 +11348,17 @@ h6:hover .anchor-link {
   overflow-x: auto;
   overflow-y: hidden;
 }
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered .rendered_html td {
+  max-width: none;
+}
 .text_cell.unrendered .text_cell_render {
   display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -10481,6 +11495,28 @@ kbd {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.jupyter-keybindings {
+  padding: 1px;
+  line-height: 24px;
+  border-bottom: 1px solid gray;
+}
+.jupyter-keybindings input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.jupyter-keybindings i {
+  padding: 6px;
+}
+.well code {
+  background-color: #ffffff;
+  border-color: #ababab;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
 /* CSS for the cell toolbar */
 .celltoolbar {
   border: thin solid #CFCFCF;
@@ -10613,6 +11649,152 @@ select[multiple].celltoolbar select {
   margin-left: 5px;
   margin-right: 5px;
 }
+.tags_button_container {
+  width: 100%;
+  display: flex;
+}
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+.tag-container > * {
+  margin: 0 4px;
+}
+.remove-tag-btn {
+  margin-left: 4px;
+}
+.tags-input {
+  display: flex;
+}
+.cell-tag:last-child:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  /* Fade to background color of cell toolbar */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #EEE);
+}
+.tags-input > * {
+  margin-left: 4px;
+}
+.cell-tag,
+.tags-input input,
+.tags-input button {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 1px;
+  box-shadow: none;
+  width: inherit;
+  font-size: inherit;
+  height: 22px;
+  line-height: 22px;
+  padding: 0px 4px;
+  display: inline-block;
+}
+.cell-tag:focus,
+.tags-input input:focus,
+.tags-input button:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.cell-tag::-moz-placeholder,
+.tags-input input::-moz-placeholder,
+.tags-input button::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.cell-tag:-ms-input-placeholder,
+.tags-input input:-ms-input-placeholder,
+.tags-input button:-ms-input-placeholder {
+  color: #999;
+}
+.cell-tag::-webkit-input-placeholder,
+.tags-input input::-webkit-input-placeholder,
+.tags-input button::-webkit-input-placeholder {
+  color: #999;
+}
+.cell-tag::-ms-expand,
+.tags-input input::-ms-expand,
+.tags-input button::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+.cell-tag[readonly],
+.tags-input input[readonly],
+.tags-input button[readonly],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  cursor: not-allowed;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button {
+  height: auto;
+}
+select.cell-tag,
+select.tags-input input,
+select.tags-input button {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button,
+select[multiple].cell-tag,
+select[multiple].tags-input input,
+select[multiple].tags-input button {
+  height: auto;
+}
+.cell-tag,
+.tags-input button {
+  padding: 0px 4px;
+}
+.cell-tag {
+  background-color: #fff;
+  white-space: nowrap;
+}
+.tags-input input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
 .completions {
   position: absolute;
   z-index: 110;
@@ -10638,16 +11820,28 @@ select[multiple].celltoolbar select {
 .completions select option.context {
   color: #286090;
 }
-#kernel_logo_widget {
-  float: right !important;
-  float: right;
-}
 #kernel_logo_widget .current_kernel_logo {
   display: none;
   margin-top: -1px;
   margin-bottom: -1px;
   width: 32px;
   height: 32px;
+}
+[dir="rtl"] #kernel_logo_widget {
+  float: left !important;
+  float: left;
+}
+.modal .modal-body .move-path {
+  display: flex;
+  flex-direction: row;
+  justify-content: space;
+  align-items: center;
+}
+.modal .modal-body .move-path .server-root {
+  padding-right: 20px;
+}
+.modal .modal-body .move-path .path-input {
+  flex: 1;
 }
 #menubar {
   box-sizing: border-box;
@@ -10669,11 +11863,41 @@ select[multiple].celltoolbar select {
 #menubar .navbar-collapse {
   clear: left;
 }
+[dir="rtl"] #menubar .navbar-toggle {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-collapse {
+  clear: right;
+}
+[dir="rtl"] #menubar .navbar-nav {
+  float: right;
+}
+[dir="rtl"] #menubar .nav {
+  padding-right: 0px;
+}
+[dir="rtl"] #menubar .navbar-nav > li {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-right {
+  float: left !important;
+}
+[dir="rtl"] ul.dropdown-menu {
+  text-align: right;
+  left: auto;
+}
+[dir="rtl"] ul#new-menu.dropdown-menu {
+  right: auto;
+  left: 0;
+}
 .nav-wrapper {
   border-bottom: 1px solid #e7e7e7;
 }
 i.menu-icon {
   padding-top: 4px;
+}
+[dir="rtl"] i.menu-icon.pull-right {
+  float: left !important;
+  float: left;
 }
 ul#help_menu li a {
   overflow: hidden;
@@ -10681,6 +11905,17 @@ ul#help_menu li a {
 }
 ul#help_menu li a i {
   margin-right: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a {
+  padding-left: 2.2em;
+}
+[dir="rtl"] ul#help_menu li a i {
+  margin-right: 0;
+  margin-left: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a i.pull-right {
+  float: left !important;
+  float: left;
 }
 .dropdown-submenu {
   position: relative;
@@ -10690,6 +11925,10 @@ ul#help_menu li a i {
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
+}
+[dir="rtl"] .dropdown-submenu > .dropdown-menu {
+  right: 100%;
+  margin-right: -1px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -10708,11 +11947,23 @@ ul#help_menu li a i {
   margin-top: 2px;
   margin-right: -10px;
 }
+.dropdown-submenu > a:after.fa-pull-left {
+  margin-right: .3em;
+}
+.dropdown-submenu > a:after.fa-pull-right {
+  margin-left: .3em;
+}
 .dropdown-submenu > a:after.pull-left {
   margin-right: .3em;
 }
 .dropdown-submenu > a:after.pull-right {
   margin-left: .3em;
+}
+[dir="rtl"] .dropdown-submenu > a:after {
+  float: left;
+  content: "\f0d9";
+  margin-right: 0;
+  margin-left: -10px;
 }
 .dropdown-submenu:hover > a:after {
   color: #262626;
@@ -10729,6 +11980,10 @@ ul#help_menu li a i {
   float: right;
   z-index: 10;
 }
+[dir="rtl"] #notification_area {
+  float: left !important;
+  float: left;
+}
 .indicator_area {
   float: right !important;
   float: right;
@@ -10739,6 +11994,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] .indicator_area {
+  float: left !important;
+  float: left;
 }
 #kernel_indicator {
   float: right !important;
@@ -10756,6 +12015,12 @@ ul#help_menu li a i {
   padding-left: 5px;
   padding-right: 5px;
 }
+[dir="rtl"] #kernel_indicator {
+  float: left !important;
+  float: left;
+  border-left: 0;
+  border-right: 1px solid;
+}
 #modal_indicator {
   float: right !important;
   float: right;
@@ -10766,6 +12031,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] #modal_indicator {
+  float: left !important;
+  float: left;
 }
 #readonly-indicator {
   float: right !important;
@@ -10796,6 +12065,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f040";
 }
+.edit_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.edit_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
+}
 .edit_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
 }
@@ -10810,6 +12085,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: ' ';
+}
+.command_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.command_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
 }
 .command_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
@@ -10826,6 +12107,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f10c";
 }
+.kernel_idle_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_idle_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_idle_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10840,6 +12127,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f111";
+}
+.kernel_busy_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_busy_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_busy_icon:before.pull-left {
   margin-right: .3em;
@@ -10856,6 +12149,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f1e2";
 }
+.kernel_dead_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_dead_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_dead_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10870,6 +12169,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f127";
+}
+.kernel_disconnected_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_disconnected_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_disconnected_icon:before.pull-left {
   margin-right: .3em;
@@ -11246,7 +12551,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 20ex;
+  width: 21ex;
   text-align: right;
   font-family: monospace;
 }
@@ -11260,27 +12565,46 @@ div#pager .ui-resizable-handle::after {
   flex: 1;
 }
 span.save_widget {
-  margin-top: 6px;
+  height: 30px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 50%;
+  flex: 1;
 }
 span.save_widget span.filename {
-  height: 1em;
+  height: 100%;
   line-height: 1em;
-  padding: 3px;
   margin-left: 16px;
   border: none;
   font-size: 146.5%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   border-radius: 2px;
 }
 span.save_widget span.filename:hover {
   background-color: #e6e6e6;
 }
+[dir="rtl"] span.save_widget.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] span.save_widget span.filename {
+  margin-left: 0;
+  margin-right: 16px;
+}
 span.checkpoint_status,
 span.autosave_status {
   font-size: small;
+  white-space: nowrap;
+  padding: 0 5px;
 }
 @media (max-width: 767px) {
   span.save_widget {
     font-size: small;
+    padding: 0 0 0 5px;
   }
   span.checkpoint_status,
   span.autosave_status {
@@ -11324,6 +12648,9 @@ span.autosave_status {
   margin-top: 0px;
   margin-left: 5px;
 }
+.toolbar-btn-label {
+  margin-left: 6px;
+}
 #maintoolbar {
   margin-bottom: -3px;
   margin-top: -8px;
@@ -11343,6 +12670,10 @@ span.autosave_status {
 }
 .select-xs {
   height: 24px;
+}
+[dir="rtl"] .btn-group > .btn,
+.btn-group-vertical > .btn {
+  float: right;
 }
 .pulse,
 .dropdown-menu > li > a.pulse,
@@ -11493,6 +12824,10 @@ ul.typeahead-list i {
   margin-left: -10px;
   width: 18px;
 }
+[dir="rtl"] ul.typeahead-list i {
+  margin-left: 0;
+  margin-right: -10px;
+}
 ul.typeahead-list {
   max-height: 80vh;
   overflow: auto;
@@ -11501,6 +12836,13 @@ ul.typeahead-list > li > a {
   /** Firefox bug **/
   /* see https://github.com/jupyter/notebook/issues/559 */
   white-space: normal;
+}
+ul.typeahead-list  > li > a.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .typeahead-list {
+  text-align: right;
 }
 .cmd-palette .modal-body {
   padding: 7px;
@@ -11512,10 +12854,19 @@ ul.typeahead-list > li > a {
   outline: none;
 }
 .no-shortcut {
-  display: none;
+  min-width: 20px;
+  color: transparent;
+}
+[dir="rtl"] .no-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .command-shortcut.pull-right {
+  float: left !important;
+  float: left;
 }
 .command-shortcut:before {
-  content: "(command)";
+  content: "(command mode)";
   padding-right: 3px;
   color: #777777;
 }
@@ -11524,6 +12875,10 @@ ul.typeahead-list > li > a {
   padding-right: 3px;
   color: #777777;
 }
+[dir="rtl"] .edit-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
 #find-and-replace #replace-preview .match,
 #find-and-replace #replace-preview .insert {
   background-color: #BBDEFB;
@@ -11531,6 +12886,12 @@ ul.typeahead-list > li > a {
   border-style: solid;
   border-width: 1px;
   border-radius: 0px;
+}
+[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
+  border-left: none;
+}
+[dir="rtl"] #find-and-replace .input-group-btn + .form-control {
+  border-right: none;
 }
 #find-and-replace #replace-preview .replace .match {
   background-color: #FFCDD2;
@@ -11558,6 +12919,7 @@ ul.typeahead-list > li > a {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
+  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -11571,6 +12933,9 @@ ul.typeahead-list > li > a {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
+}
+.terminal-app .terminal .xterm-rows {
+  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -11631,8 +12996,10 @@ ul.typeahead-list > li > a {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -11643,9 +13010,11 @@ ul.typeahead-list > li > a {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -11699,9 +13068,7 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}
-
-@media print {
+}@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11722,7 +13089,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11746,20 +13113,16 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Introduction-to-NumPy">Introduction to NumPy<a class="anchor-link" href="#Introduction-to-NumPy">&#182;</a></h1><hr>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>As we discussed previously, the Python programming language provides a rich set of data structures such as the list, tuple, dictionary, and string, which can greatly simplify common programming tasks. Of these structures, all but the string are heterogeneous, which means they can hold data of different types. This flexibility comes at a cost, however, as it is more expensive in both computational time and storage to maintain an arbitrary collection of data than to hold a pre-defined set of data.</p>
 <hr>
@@ -11772,10 +13135,8 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Is-NumPy-Worth-Learning?">Is NumPy Worth Learning?<a class="anchor-link" href="#Is-NumPy-Worth-Learning?">&#182;</a></h3><p>Despite the discussion in the previous section, you might be curious if the benefits of learning NumPy are worth the effort of learning to effectively use a new Python data structure, especially one that is not part of the standard Python distribution. In the end, you will have to make this decision, but there are several definite benefits to using NumPy:</p>
 <ol>
@@ -11809,7 +13170,7 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="n">anArray</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11817,10 +13178,14 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[2.01, 3.01, 4.01, 5.01]
-[ 2.01  3.01  4.01  5.01]
+[2.01 3.01 4.01 5.01]
 </pre>
 </div>
 </div>
@@ -11829,10 +13194,8 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p>At this point, we have created and populated both data structures, and you have seen that they are both indexed in the same manner, meaning it is probably easier to learn and use NumPy arrays than you might have thought. Next, we can apply several standard mathematical functions to our <code>list</code>, creating new <code>list</code>s in the process. To determine how long these operations take, we use the IPython <code>%timeit</code> magic function, which will, by default, run the code contained on the rest of the line multiple times and report the <em>average</em> best time.</p>
@@ -11851,7 +13214,7 @@ div#notebook {
 <span class="o">%</span><span class="k">timeit</span> [math.log(x) for x in aList]
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11859,11 +13222,15 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>100 loops, best of 3: 15.5 ms per loop
-100 loops, best of 3: 15.1 ms per loop
-100 loops, best of 3: 18.5 ms per loop
+<pre>12.1 ms ± 623 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+11.6 ms ± 394 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+13.2 ms ± 232 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre>
 </div>
 </div>
@@ -11872,10 +13239,8 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p>As you can see, to create these new <code>list</code> objects, we apply the mathematical function to every angle in the original <code>list</code>. These operations are fairly fast and all roughly constant in time, demonstrating the overall speed of <em>list comprehensions</em> in Python. Now we will try doing the same thing by using the NumPy library.</p>
@@ -11894,7 +13259,7 @@ div#notebook {
 <span class="o">%</span><span class="k">timeit</span> np.log10(anArray)
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11902,11 +13267,15 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>100 loops, best of 3: 3.46 ms per loop
-100 loops, best of 3: 3.42 ms per loop
-100 loops, best of 3: 2.74 ms per loop
+<pre>2.74 ms ± 66.8 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+2.71 ms ± 67 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+2.16 ms ± 110 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre>
 </div>
 </div>
@@ -11915,10 +13284,8 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p>First, the creation of each of these new arrays was much faster, nearly a factor of ten in each case! (Actual results will depend on the host computer and Python version.) Second, the operations themselves were arguably simpler both to write and to read, as the function is applied to the data structure itself and not each individual element. But perhaps we should compare the results to ensure they are the same.</p>
@@ -11941,10 +13308,10 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Difference = &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">]))</span>
       
 <span class="c1"># Now create a NumPy array from a Python list</span>
-<span class="o">%</span><span class="k">timeit</span>(np.sin(aList))
+<span class="o">%</span><span class="k">timeit</span> np.sin(aList)
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11952,12 +13319,16 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Python List:  [0.905090563325201, -0.9560397542711181, 0.9878538030350801]
 NumPY array: [ 0.90509056 -0.95603975  0.9878538 ]
-Difference =  [ 0.  0.]
-100 loops, best of 3: 6.07 ms per loop
+Difference =  [0. 0.]
+4.84 ms ± 72.9 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre>
 </div>
 </div>
@@ -11966,10 +13337,8 @@ Difference =  [ 0.  0.]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p>As the previous code block demonstrates, the NumPy results agree with the standard Python results, although the NumPy results are more conveniently displayed. As a last test, we create a new NumPy <code>array</code> from the original Python <code>list</code> by applying the <code>np.sin</code> function, which, while not as fast as the pure NumPy version, is faster than the Python version and easier to read.</p>
@@ -11979,10 +13348,8 @@ Difference =  [ 0.  0.]
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Creating-an-Array">Creating an Array<a class="anchor-link" href="#Creating-an-Array">&#182;</a></h3><p><a href="http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html">NumPy arrays</a>, which are instances of the <code>ndarray</code> class, are statically-typed, homogenous data structures that can be created in a number of <a href="http://docs.scipy.org/doc/numpy/user/basics.creation.html">different ways</a>. You can create an array from an existing Python <code>list</code> or <code>tuple</code>, or use one of the many built-in NumPy convenience methods:</p>
 <ul>
@@ -12013,7 +13380,7 @@ Difference =  [ 0.  0.]
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12021,17 +13388,20 @@ Difference =  [ 0.  0.]
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0 1 2 3 4 5 6 7 8 9]
 
- [  0.00000000e+000   4.94065646e-324   9.88131292e-324   1.48219694e-323
-   1.97626258e-323   2.47032823e-323   2.96439388e-323   3.45845952e-323
-   3.95252517e-323   4.44659081e-323]
+ [0.0e+000 4.9e-324 9.9e-324 1.5e-323 2.0e-323 2.5e-323 3.0e-323 3.5e-323
+ 4.0e-323 4.4e-323]
 
- [ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
 
- [ 1.  1.  1.  1.  1.  1.  1.  1.  1.  1.]
+ [1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
 
  [1 1 1 1 1 1 1 1 1 1]
 </pre>
@@ -12042,10 +13412,8 @@ Difference =  [ 0.  0.]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p>We can also create NumPy arrays that have specific initialization patterns. For example, the <code>arange(start, end, stride)</code> method works like the normal Python <code>range</code> method, creating an array whose elements begin with the <code>start</code> parameter. Subsequent elements are incremented successively by the <code>stride</code> parameter, stopping when the <code>end</code> parameter would either be reached or surpassed. As was the case with the <code>range</code> method, the <code>start</code> and <code>stride</code>  parameters are optional, defaulting to zero and one, respectively, and the <code>end</code> value is not included in the array.</p>
@@ -12065,7 +13433,7 @@ Difference =  [ 0.  0.]
 <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12073,7 +13441,11 @@ Difference =  [ 0.  0.]
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0 1 2 3 4 5 6 7 8 9]
 [3 5 7 9]
@@ -12085,10 +13457,8 @@ Difference =  [ 0.  0.]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p>NumPy also provides two convenience methods that take a similar form but assign values to the elements that are evenly spaced. The first method is the <code>linspace(start, end, num)</code> method, which creates <code>num</code> elements and assigns values that are linearly spaced between <code>start</code> and <code>end</code>.</p>
@@ -12115,7 +13485,7 @@ Difference =  [ 0.  0.]
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Default linspace bins = </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">))))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12123,13 +13493,17 @@ Difference =  [ 0.  0.]
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Linear space bins [0, 10] = [  0.           3.33333333   6.66666667  10.        ]
+<pre>Linear space bins [0, 10] = [ 0.          3.33333333  6.66666667 10.        ]
 
 Default linspace bins = 50
 
-Log space bins [0, 1] = [  1.           2.15443469   4.64158883  10.        ]
+Log space bins [0, 1] = [ 1.          2.15443469  4.64158883 10.        ]
 
 Default linspace bins = 50
 
@@ -12141,10 +13515,8 @@ Default linspace bins = 50
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="Array-Attributes">Array Attributes<a class="anchor-link" href="#Array-Attributes">&#182;</a></h3><p>Each NumPy array has several attributes that describe the general features of the array. These attributes include the following:</p>
@@ -12161,10 +13533,8 @@ Default linspace bins = 50
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Array-Data-Types">Array Data Types<a class="anchor-link" href="#Array-Data-Types">&#182;</a></h3><p>NumPy arrays are statically-typed, thus their <a href="http://docs.scipy.org/doc/numpy/reference/arrays.dtypes.html">data type</a> is specified when they are created. The default data type is <code>float</code>, but the type can be specified in several ways. First, if you use an existing <code>list</code> (as we did in the previous code block) or <code>array</code> to initialize the new <code>array</code>, the data type of the previous data structure will be used. If a heterogeneous Python <code>list</code> is used, the greatest data type will be used in order, guaranteeing that all values will be safely contained in the new <code>array</code>. If using a NumPy function to create the new <code>array</code>, the data type can be specified explicitly by using the <code>dtype</code> argument, which can either be one of the predefined built-in data types or a user defined custom data type.</p>
 <p>The full list of built-in data types can be obtained from the <code>np.sctypeDict.keys()</code> method; but for brevity, we list some of the more commonly used built-in data types below, along with their maximum size in bits, which constrains the maximum allowed value that may be stored in the new <code>array</code>:</p>
@@ -12190,7 +13560,7 @@ Default linspace bins = 50
 <span class="n">a</span><span class="o">.</span><span class="n">dtype</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12198,7 +13568,11 @@ Default linspace bins = 50
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -12211,10 +13585,8 @@ Default linspace bins = 50
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p>As previously declared, trying to assign the wrong data type to a NumPy array will throw a <code>ValueException</code>, as shown in the following figure (note: you can repeat this on your own in a new code cell).</p>
@@ -12224,20 +13596,16 @@ Default linspace bins = 50
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Multidimensional-Arrays">Multidimensional Arrays<a class="anchor-link" href="#Multidimensional-Arrays">&#182;</a></h2><p>NumPy supports multidimensional arrays, although for simplicity we will rarely discuss anything other than two- or three-dimensional arrays. We will defer a discussion of working with multi-dimensional arrays by using NumPy to a subsequent lesson in this course.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="Indexing-Arrays">Indexing Arrays<a class="anchor-link" href="#Indexing-Arrays">&#182;</a></h2><p>NumPy supports many different ways to <a href="http://docs.scipy.org/doc/numpy/user/basics.indexing.html">access elements</a> in an array. Elements can be indexed or sliced in the same way a Python list or tuple can be indexed or sliced, as demonstrated in the following code cell.</p>
@@ -12261,7 +13629,7 @@ Default linspace bins = 50
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">New Array = &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12269,7 +13637,11 @@ Default linspace bins = 50
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Original Array =  [0 1 2 3 4 5 6 7 8]
 
@@ -12282,10 +13654,8 @@ New Array =  [ 0  3 -2  4 -4  5  6  7  8]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="Special-Indexing">Special Indexing<a class="anchor-link" href="#Special-Indexing">&#182;</a></h3><p>NumPy also provides several other <em>special</em> indexing techniques. The first such technique is the use of an <a href="http://docs.scipy.org/doc/numpy/user/basics.indexing.html#index-arrays">index array</a>, where you use an array to specify the elements to be selected. The second technique is a <a href="http://docs.scipy.org/doc/numpy/user/basics.indexing.html#boolean-or-mask-index-arrays">Boolean mask array</a>. In this case, the Boolean array is the same size as the primary NumPy array, and if the element in the mask array is <code>True</code>, the corresponding element in the primary array is selected, and vice-versa for a <code>False</code> mask array element. These two special indexing techniques are demonstrated in the following two code cells.</p>
@@ -12307,7 +13677,7 @@ New Array =  [ 0  3 -2  4 -4  5  6  7  8]
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Index Access: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">])])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12315,7 +13685,11 @@ New Array =  [ 0  3 -2  4 -4  5  6  7  8]
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 Starting array:
@@ -12350,7 +13724,7 @@ Index Access:  [1 3 5 7]
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">New Array: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12358,7 +13732,11 @@ Index Access:  [1 3 5 7]
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Original Array: [0 1 2 3 4 5 6 7 8 9]
 
@@ -12373,10 +13751,8 @@ New Array:  [ 0  1  2  3  4 -1 -1 -1 -1 -1]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="Random-Data">Random Data<a class="anchor-link" href="#Random-Data">&#182;</a></h3><p>NumPy has a rich support for <a href="http://docs.scipy.org/doc/numpy/reference/routines.random.html">random number</a> generation, which can be used to create and populate an array of a given shape and size. NumPy provides support for sampling random values from over 30 different distributions including the <code>binomial</code>, <code>normal</code>, and <code>poisson</code> (we will discuss distribution functions in subsequent lessons). There are also special convenience functions to simplify the sampling of random data over the uniform or normal distributions. These techniques are demonstrated in the following code cell.</p>
@@ -12397,7 +13773,7 @@ New Array:  [ 0  1  2  3  4 -1 -1 -1 -1 -1]
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Normal sampling (0, 1) : </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12405,11 +13781,15 @@ New Array:  [ 0  1  2  3  4 -1 -1 -1 -1 -1]
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Uniform sampling, integers [0, 1): [7 4 4 5 4]
-Uniform sampling [0, 1): [ 0.16033963  0.13203742  0.23551834  0.00683395  0.50621295]
-Normal sampling (0, 1) : [ 1.17790566 -1.43619769  2.11894457  0.68657328  0.94722555]
+<pre>Uniform sampling, integers [0, 1): [7 9 7 1 4]
+Uniform sampling [0, 1): [0.03940366 0.17357534 0.82906679 0.89069131 0.57856134]
+Normal sampling (0, 1) : [ 1.18137452  1.00074096  1.90949477 -1.45488541  2.2543386 ]
 </pre>
 </div>
 </div>
@@ -12418,10 +13798,8 @@ Normal sampling (0, 1) : [ 1.17790566 -1.43619769  2.11894457  0.68657328  0.947
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="Basic-Operations">Basic Operations<a class="anchor-link" href="#Basic-Operations">&#182;</a></h3><p>NumPy arrays naturally support basic mathematical operations, including addition, subtraction, multiplication, division, integer division, and remainder, allowing you to easily combine a scalar (a single number) with a vector (a one-dimensional array), or a matrix (a multi-dimensional array). In the next code block, we first create a one-dimensional array, and subsequently operate on this array to demonstrate how to combine a scalar with a vector.</p>
@@ -12444,7 +13822,7 @@ Normal sampling (0, 1) : [ 1.17790566 -1.43619769  2.11894457  0.68657328  0.947
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12452,12 +13830,16 @@ Normal sampling (0, 1) : [ 1.17790566 -1.43619769  2.11894457  0.68657328  0.947
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0 1 2 3 4 5 6 7 8 9]
 
- [ 0.33333333  1.          1.66666667  2.33333333  3.          3.66666667
-  4.33333333  5.          5.66666667  6.33333333]
+ [0.33333333 1.         1.66666667 2.33333333 3.         3.66666667
+ 4.33333333 5.         5.66666667 6.33333333]
 
  [0 1 0 1 0 1 0 1 0 1]
 
@@ -12470,13 +13852,11 @@ Normal sampling (0, 1) : [ 1.17790566 -1.43619769  2.11894457  0.68657328  0.947
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<p>&lt;font color='red' size = '5'&gt; Student Exercise &lt;/font&gt;</p>
+<p><font color='red' size = '5'> Student Exercise </font></p>
 <p>In the empty <strong>Code</strong> cell below, first create a one-dimensional NumPy array by using the <code>arange</code> function of the integers zero to ten, inclusive. Next, perform the following  basic math operations on this new array and display only the final result. First, add two to every element. Second, multiply the result by five. Finally, subtract seven. Next, create a second array of eleven, randomly selected integers between zero and ten, and multiply this new array by the original array, displaying the result.</p>
 <hr>
 
@@ -12491,15 +13871,13 @@ Normal sampling (0, 1) : [ 1.17790566 -1.43619769  2.11894457  0.68657328  0.947
 <div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="Summary-Functions">Summary Functions<a class="anchor-link" href="#Summary-Functions">&#182;</a></h3><p>NumPy provides convenience functions that can quickly summarize the values of an array, which can be very useful for specific data processing tasks (note that we will cover descriptive statistics in a subsequent lesson). These functions include basic <a href="http://docs.scipy.org/doc/numpy/reference/routines.statistics.html">statistical measures</a> (<code>mean</code>, <code>median</code>, <code>var</code>, <code>std</code>, <code>min</code>, and <code>max</code>), the total sum or product of all elements in the array (<code>sum</code>, <code>prod</code>), as well as running sums or products for all elements in the array (<code>cumsum</code>, <code>cumprod</code>). The last two functions actually produce arrays that are of the same size as the input array, where each element is replaced by the respective running sum/product up to and including the current element. Another function, <code>trace</code>, calculates the trace of an array, which simply sums up the diagonal elements in the multi-dimensional array.</p>
@@ -12533,7 +13911,7 @@ Normal sampling (0, 1) : [ 1.17790566 -1.43619769  2.11894457  0.68657328  0.947
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running product of all values = </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cumprod</span><span class="p">(</span><span class="n">a</span><span class="p">)))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12541,7 +13919,11 @@ Normal sampling (0, 1) : [ 1.17790566 -1.43619769  2.11894457  0.68657328  0.947
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Mean value = 3.0
 Median value = 3.0
@@ -12565,10 +13947,8 @@ Running product of all values = [  1   2   6  24 120]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="Universal-Functions">Universal Functions<a class="anchor-link" href="#Universal-Functions">&#182;</a></h3><p>NumPy also includes methods that are <em>universal functions</em> or <a href="http://docs.scipy.org/doc/numpy/reference/ufuncs.html"><strong>ufuncs</strong></a> that are vectorized and thus operate on each element in the array, without the need for a loop. You have already seen examples of some of these functions at the start of this IPython Notebook when we compared the speed and simplicity of NumPy versus normal Python for numerical operations. These functions almost all include an optional <code>out</code> parameter that allows a pre-defined NumPy array to be used to hold the results of the calculation, which can often speed-up the processing by eliminating the need for the creation and destruction of temporary arrays. These functions will all still return the final array, even if the <code>out</code> parameter is used.</p>
@@ -12607,7 +13987,7 @@ Running product of all values = [  1   2   6  24 120]
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">np.logical_and : </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="kc">True</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12615,7 +13995,11 @@ Running product of all values = [  1   2   6  24 120]
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>original array:
  [1 2 3 4 5 6 7 8 9]
@@ -12657,7 +14041,7 @@ np.logical_and :
 <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">d</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">,</span> <span class="n">d</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12665,7 +14049,11 @@ np.logical_and :
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Greater Than or Equal Test: 
  [False False False False False  True  True  True  True]
@@ -12673,11 +14061,15 @@ np.logical_and :
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([False, False, False, False, False,  True, False,  True, False], dtype=bool)</pre>
+<pre>array([False, False, False, False, False,  True, False,  True, False])</pre>
 </div>
 
 </div>
@@ -12686,10 +14078,8 @@ np.logical_and :
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="Masked-Arrays">Masked Arrays<a class="anchor-link" href="#Masked-Arrays">&#182;</a></h3><p>NumPy provides support for <a href="http://docs.scipy.org/doc/numpy/reference/maskedarray.generic.html#examples">masked arrays</a>, where certain elements can be <em>masked</em> based on some criterion and ignored during subsequent calculations (i.e., these elements are masked). Masked arrays are in the <code>numpy.ma</code> package, and simply require a masked array to be created from a given array and a condition that indicates which elements should be masked. This new masked array can be used as a normal NumPy array, except the masked elements are ignored. NumPy provides <a href="http://docs.scipy.org/doc/numpy/reference/routines.ma.html">operations</a> for masked arrays, allowing them to be used in a similar manner as normal NumPy arrays.</p>
@@ -12721,7 +14111,7 @@ np.logical_and :
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Impute missing values (using mean): &quot;</span><span class="p">,</span> <span class="n">mx</span><span class="o">.</span><span class="n">filled</span><span class="p">(</span><span class="n">mx</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span> <span class="c1"># Imputation</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12729,7 +14119,11 @@ np.logical_and :
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Original array = : [0.0, 1.0, -9999.0, 3.0, 4.0]
 
@@ -12739,7 +14133,7 @@ Mean value of masked elements: 2.0
 
 Operate on unmasked elements:  [-2.0 -1.0 -- 1.0 2.0]
 
- Impute missing values (using mean):  [ 0.  1.  2.  3.  4.]
+ Impute missing values (using mean):  [0. 1. 2. 3. 4.]
 </pre>
 </div>
 </div>
@@ -12761,7 +14155,7 @@ Operate on unmasked elements:  [-2.0 -1.0 -- 1.0 2.0]
 <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12769,14 +14163,22 @@ Operate on unmasked elements:  [-2.0 -1.0 -- 1.0 2.0]
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[1.0 -- -- 1.0 -- --]
 </pre>
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/opt/conda/envs/py36/lib/python3.6/site-packages/ipykernel_launcher.py:6: RuntimeWarning: invalid value encountered in sqrt
   
@@ -12801,7 +14203,7 @@ Operate on unmasked elements:  [-2.0 -1.0 -- 1.0 2.0]
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Masked array mean value: &quot;</span><span class="p">,</span> <span class="n">ma</span><span class="o">.</span><span class="n">masked_outside</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12809,9 +14211,13 @@ Operate on unmasked elements:  [-2.0 -1.0 -- 1.0 2.0]
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Masked array mean value:  0.500402970699
+<pre>Masked array mean value:  0.5064199853933288
 </pre>
 </div>
 </div>
@@ -12820,10 +14226,8 @@ Operate on unmasked elements:  [-2.0 -1.0 -- 1.0 2.0]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h3 id="NumPy-File-Input/Output">NumPy File Input/Output<a class="anchor-link" href="#NumPy-File-Input/Output">&#182;</a></h3><p>NumPy has support for reading or writing data to <a href="http://docs.scipy.org/doc/numpy/user/basics.io.html">files</a>. Of these methods, two of the most useful are the <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html#numpy.loadtxt"><code>loadtxt</code> method</a> and the <a href="http://docs.scipy.org/doc/numpy/user/basics.io.genfromtxt.html#defining-the-input"><code>genfromext</code> method</a>, each of which allow you to easily read data from a text file into a NumPy array. The primary difference is that the <code>genfromtxt</code> method can handle missing data, while the <code>loadtxt</code> cannot. Both methods allow you to specify the column delimiter, easily skip header or footer rows, specify which columns should be extracted for each row, and allow you to <em>unpack</em> the row so that each column goes into a separate array.</p>
@@ -12852,7 +14256,7 @@ Operate on unmasked elements:  [-2.0 -1.0 -- 1.0 2.0]
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;New Array = </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12860,11 +14264,15 @@ Operate on unmasked elements:  [-2.0 -1.0 -- 1.0 2.0]
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>New Array = 
- [[  1.   2.   3.   4.   5.]
- [  6.   7.   8.   9.  10.]]
+ [[ 1.  2.  3.  4.  5.]
+ [ 6.  7.  8.  9. 10.]]
 </pre>
 </div>
 </div>
@@ -12873,460 +14281,23 @@ Operate on unmasked elements:  [-2.0 -1.0 -- 1.0 2.0]
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<p>In addition to the normal Python <code>help</code> function, NumPy provides a special <code>lookup</code> function that will search the NumPy library for classes, types, or methods that match the search string passed to the function. This can be useful for finding specific information given a general concept, or to learn more about related topics by performing a search.</p>
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">lookfor</span><span class="p">(</span><span class="s1">&#39;masked array&#39;</span><span class="p">)</span>
+<p>In addition to the normal Python <code>help</code> function, NumPy provides a special <code>lookup</code> function that will search the NumPy library for classes, types, or methods that match the search string passed to the function. This can be useful for finding specific information given a general concept, or to learn more about related topics by performing a search. For example, the following function call would display all relevant NumPy information for 'masked array'.</p>
+<div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">lookfor</span><span class="p">(</span><span class="s1">&#39;masked array&#39;</span><span class="p">)</span>
 </pre></div>
+<hr>
 
 </div>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Search results for &#39;masked array&#39;
----------------------------------
-numpy.ma.array
-    An array class with possibly masked values.
-numpy.mafromtxt
-    Load ASCII data stored in a text file and return a masked array.
-numpy.ma.asarray
-    Convert the input to a masked array of the given data-type.
-numpy.ma.dot
-    Return the dot product of two arrays.
-numpy.ma.put
-    Set storage-indexed locations to corresponding values.
-numpy.ma.asanyarray
-    Convert the input to a masked array, conserving subclasses.
-numpy.ma.diag
-    Extract a diagonal or construct a diagonal array.
-numpy.ma.dump
-    Pickle a masked array to a file.
-numpy.ma.isMA
-    Test whether input is an instance of MaskedArray.
-numpy.ma.masked_all
-    Empty masked array with all elements masked.
-numpy.ma.count
-    Count the non-masked elements of the array along the given axis.
-numpy.ma.dumps
-    Return a string corresponding to the pickling of a masked array.
-numpy.ma.masked_less
-    Mask an array where less than a given value.
-numpy.ma.mvoid
-    Fake a &#39;void&#39; object to use for masked array with structured dtypes.
-numpy.ma.power
-    Returns element-wise base array raised to power from second array.
-numpy.ma.where
-    Return a masked array with elements from x or y, depending on condition.
-numpy.ma.clump_masked
-    Returns a list of slices corresponding to the masked clumps of a 1-D array.
-numpy.ma.filled
-    Return input as an array with masked data replaced by a fill value.
-numpy.ma.getmaskarray
-    Return the mask of a masked array, or full boolean array of False.
-numpy.ma.masked_equal
-    Mask an array where equal to a given value.
-numpy.ma.masked_where
-    Mask an array where a condition is met.
-numpy.ma.resize
-    Return a new masked array with the specified size and shape.
-numpy.ma.unique
-    Finds the unique elements of an array.
-numpy.ma.MAError
-    Class for masked array related errors.
-numpy.ma.argsort
-    Return an ndarray of indices that sort the array along the
-numpy.ma.ediff1d
-    Compute the differences between consecutive elements of an array.
-numpy.ma.getdata
-    Return the data of a masked array as an ndarray.
-numpy.ma.getmask
-    Return the mask of a masked array, or nomask.
-numpy.ma.masked_inside
-    Mask an array inside a given interval.
-numpy.ma.masked_object
-    Mask the array `x` where the data are exactly equal to value.
-numpy.ma.masked_values
-    Mask using floating point equality.
-numpy.ma.putmask
-    Changes elements of an array based on conditional and input values.
-numpy.ma.reshape
-    Returns an array containing the same data with a new shape.
-numpy.ma.union1d
-    Union of two arrays.
-numpy.ma.allclose
-    Returns True if two arrays are element-wise equal within a tolerance.
-numpy.ma.clump_unmasked
-    Return list of slices corresponding to the unmasked clumps of a 1-D array.
-numpy.ma.fromflex
-    Build a masked array from a suitable flexible-type array.
-numpy.ma.masked_greater
-    Mask an array where greater than a given value.
-numpy.ma.masked_invalid
-    Mask an array where invalid values occur (NaNs or infs).
-numpy.ma.masked_outside
-    Mask an array outside a given interval.
-numpy.ma.setxor1d
-    Set exclusive-or of 1-D arrays with unique elements.
-numpy.ma.mask_cols
-    Mask columns of a 2D array that contain masked values.
-numpy.ma.mask_rows
-    Mask rows of a 2D array that contain masked values.
-numpy.ma.masked_all_like
-    Empty masked array with the properties of an existing array.
-numpy.ma.setdiff1d
-    Set difference of 1D arrays with unique elements.
-numpy.ma.compressed
-    Return all the non-masked data as a 1-D array.
-numpy.ma.left_shift
-    Shift the bits of an integer to the left.
-numpy.ma.masked_not_equal
-    Mask an array where `not` equal to a given value.
-numpy.ma.MaskedArray
-    An array class with possibly masked values.
-numpy.ma.intersect1d
-    Returns the unique elements common to both arrays.
-numpy.ma.masked_less_equal
-    Mask an array where less than or equal to a given value.
-numpy.ma.right_shift
-    Shift the bits of an integer to the right.
-numpy.ma.mask_rowcols
-    Mask rows and/or columns of a 2D array that contain masked values.
-numpy.ma.compress_cols
-    Suppress whole columns of a 2-D array that contain masked values.
-numpy.ma.compress_rows
-    Suppress whole rows of a 2-D array that contain masked values.
-numpy.ma.flatnotmasked_edges
-    Find the indices of the first and last unmasked values.
-numpy.ma.masked_greater_equal
-    Mask an array where greater than or equal to a given value.
-numpy.ma.notmasked_contiguous
-    Find contiguous unmasked data in a masked array along the given axis.
-numpy.ma.set_fill_value
-    Set the filling value of a, if a is a masked array.
-numpy.ma.compress_rowcols
-    Suppress the rows and/or columns of a 2-D array that contain
-numpy.ma.common_fill_value
-    Return the common filling value of two masked arrays, if any.
-numpy.ma.flatnotmasked_contiguous
-    Find contiguous unmasked data in a masked array along the given axis.
-numpy.ma.mrecords.fromarrays
-    Creates a mrecarray from a (flat) list of masked arrays.
-numpy.ma.mvoid.__new__
-    Create a new masked array from scratch.
-numpy.ma.MaskedArray.all
-    Returns True if all elements evaluate to True.
-numpy.ma.MaskedArray.dot
-    Masked dot product of two arrays. Note that `out` and `strict` are
-numpy.ma.MaskedArray.std
-    Returns the standard deviation of the array elements along given axis.
-numpy.ma.MaskedArray.sum
-    Return the sum of the array elements over the given axis.
-numpy.ma.MaskedArray.mean
-    Returns the average of the array elements along given axis.
-numpy.ma.MaskedArray.prod
-    Return the product of the array elements over the given axis.
-numpy.ma.MaskedArray.count
-    Count the non-masked elements of the array along the given axis.
-numpy.ma.mrecords.addfield
-    Adds a new field to the masked record array
-numpy.ma.MaskedArray.argmax
-    Returns array of indices of the maximum values along the given axis.
-numpy.ma.MaskedArray.astype
-    Returns a copy of the MaskedArray cast to given newtype.
-numpy.ma.MaskedArray.cumsum
-    Return the cumulative sum of the array elements over the given axis.
-numpy.ma.MaskedArray.filled
-    Return a copy of self, with masked values filled with a given value.
-numpy.ma.MaskedArray.tofile
-    Save a masked array to a file in binary format.
-numpy.ma.MaskedArray.toflex
-    Transforms a masked array into a flexible-type array.
-numpy.ma.MaskedArray.tolist
-    Return the data portion of the masked array as a hierarchical Python list.
-numpy.ma.MaskedArray.__add__
-    Add self to other, and return a new masked array.
-numpy.ma.MaskedArray.__div__
-    Divide other into self, and return a new masked array.
-numpy.ma.MaskedArray.__mul__
-    Multiply self by other, and return a new masked array.
-numpy.ma.MaskedArray.__new__
-    Create a new masked array from scratch.
-numpy.ma.MaskedArray.__sub__
-    Subtract other from self, and return a new masked array.
-numpy.ma.MaskedArray.argsort
-    Return an ndarray of indices that sort the array along the
-numpy.ma.MaskedArray.cumprod
-    Return the cumulative product of the array elements over the given axis.
-numpy.ma.MaskedArray.nonzero
-    Return the indices of unmasked elements that are not zero.
-numpy.ma.MaskedArray.reshape
-    Give a new shape to the array without changing its data.
-numpy.ma.MaskedArray.__radd__
-    Add other to self, and return a new masked array.
-numpy.ma.MaskedArray.__rmul__
-    Multiply other by self, and return a new masked array.
-numpy.ma.MaskedArray.__rsub__
-    Subtract self from other, and return a new masked array.
-numpy.ma.MaskedArray.compress
-    Return `a` where condition is ``True``.
-numpy.ma.MaskedArray.get_imag
-    Return the imaginary part of the masked array.
-numpy.ma.MaskedArray.get_real
-    Return the real part of the masked array.
-numpy.ma.MaskedArray.__reduce__
-    Return a 3-tuple for pickling a MaskedArray.
-numpy.ma.MaskedArray.compressed
-    Return all the non-masked data as a 1-D array.
-numpy.ma.testutils.assert_array_equal
-    Checks the elementwise equality of two masked arrays.
-numpy.ma.MaskedArray.__getitem__
-    x.__getitem__(y) &lt;==&gt; x[y]
-numpy.ma.MaskedArray.__truediv__
-    Divide other into self, and return a new masked array.
-numpy.ma.MaskedArray.harden_mask
-    Force the mask to hard.
-numpy.ma.MaskedArray.soften_mask
-    Force the mask to soft.
-numpy.ma.testutils.fail_if_array_equal
-    Raises an assertion error if two masked arrays are not equal elementwise.
-numpy.ma.MaskedArray.__array_finalize__
-    Finalizes the masked array.
-numpy.ma.MaskedArray.__floordiv__
-    Divide other into self, and return a new masked array.
-numpy.ma.MaskedArray.__getstate__
-    Return the internal state of the masked array, for pickling
-numpy.ma.MaskedArray.__rtruediv__
-    Divide self into other, and return a new masked array.
-numpy.ma.MaskedArray.__setstate__
-    Restore the internal state of the masked array, for
-numpy.ma.MaskedArray.unshare_mask
-    Copy the mask and set the sharedmask flag to False.
-numpy.ma.testutils.assert_array_compare
-    Asserts that comparison between two masked arrays is satisfied.
-numpy.ma.MaskedArray.__rfloordiv__
-    Divide self into other, and return a new masked array.
-numpy.ma.MaskedArray.get_fill_value
-    Return the filling value of the masked array.
-numpy.ma.MaskedArray.set_fill_value
-    Set the filling value of the masked array.
-numpy.array_repr
-    Return the string representation of an array.
-numpy.ma.testutils.assert_array_almost_equal
-    Checks the equality of two masked arrays, up to given number odecimals.
-numpy.ma.testutils.assert_array_approx_equal
-    Checks the equality of two masked arrays, up to given number odecimals.
-numpy.place
-    Change elements of an array based on conditional and input values.
-numpy.ravel
-    Return a contiguous flattened array.
-numpy.nditer
-    Efficient multi-dimensional iterator object to iterate over arrays.
-numpy.ediff1d
-    The differences between consecutive elements of an array.
-numpy.ma.mrecords.MaskedRecords.__new__
-    Create a new masked array from scratch.
-numpy.recfromcsv
-    Load ASCII data stored in a comma-separated file.
-numpy.recfromtxt
-    Load ASCII data from a file and return it in a record array.
-numpy.concatenate
-    Join a sequence of arrays along an existing axis.
-numpy.ma.is_masked
-    Determine whether input has masked values.
-numpy.ma.std
-    Returns the standard deviation of the array elements along given axis.
-numpy.ma.sum
-    Return the sum of the array elements over the given axis.
-numpy.ma.in1d
-    Test whether each element of an array is also present in a second
-numpy.ma.mean
-    Returns the average of the array elements along given axis.
-numpy.ma.prod
-    Return the product of the array elements over the given axis.
-numpy.ma.sort
-    Sort the array, in-place
-numpy.ma.mrecords.MaskedRecords.__reduce__
-    Return a 3-tuple for pickling a MaskedArray.
-numpy.ma.inner
-    Inner product of two arrays.
-numpy.ma.append
-    Append values to the end of an array.
-numpy.ma.argmax
-    Returns array of indices of the maximum values along the given axis.
-numpy.ma.argmin
-    Return array of indices to the minimum values along the given axis.
-numpy.ma.choose
-    Use an index array to construct a new array from a set of choices.
-numpy.ma.count_masked
-    Count the number of masked elements along the given axis.
-numpy.ma.cumsum
-    Return the cumulative sum of the array elements over the given axis.
-numpy.ma.median
-    Compute the median along the specified axis.
-numpy.ma.mrecords.MaskedRecords.__array_finalize__
-    Finalizes the masked array.
-numpy.ma.mrecords.MaskedRecords.__getstate__
-    Return the internal state of the masked array.
-numpy.ma.mrecords.MaskedRecords.__setstate__
-    Restore the internal state of the masked array.
-numpy.ma.average
-    Return the weighted average of array over the given axis.
-numpy.ma.cumprod
-    Return the cumulative product of the array elements over the given axis.
-numpy.ma.nonzero
-    nonzero(self)
-numpy.ma.product
-    Return the product of the array elements over the given axis.
-numpy.ma.allequal
-    Return True if all entries of a and b are equal, using
-numpy.ma.notmasked_edges
-    Find the indices of the first and last unmasked values along an axis.
-numpy.ma.transpose
-    Permute the dimensions of an array.
-numpy.ma.compress_nd
-    Supress slices from multiple dimensions which contain masked values.
-numpy.ma.concatenate
-    Concatenate a sequence of arrays along the given axis.
-numpy.ma.expand_dims
-    Expand the shape of an array.
-numpy.ma.fix_invalid
-    Return input with invalid data masked and replaced by a fill value.
-numpy.ma.timer_comparison.ModuleTester.assert_array_equal
-    Checks the elementwise equality of two masked arrays.
-numpy.ma.timer_comparison.ModuleTester.assert_array_compare
-    Assert that a comparison of two masked arrays is satisfied elementwise.
-numpy.ma.flatten_structured_array
-    Flatten a structured array.
-numpy.ma.mvoid.filled
-    Return a copy with masked fields filled with a given value.
-numpy.ma.MaskedArray.any
-    Returns True if any of the elements of `a` evaluate to True.
-numpy.ma.MaskedArray.mini
-    Return the array minimum along the specified axis.
-numpy.ma.MaskedArray.sort
-    Sort the array, in-place
-numpy.ma.MaskedArray.argmin
-    Return array of indices to the minimum values along the given axis.
-numpy.ma.MaskedArray.tobytes
-    Return the array data as a string containing the raw bytes in the array.
-numpy.lib.recfunctions.merge_arrays
-    Merge arrays field by field.
-numpy.lib.recfunctions.stack_arrays
-    Superposes arrays fields by fields
-numpy.ma.mrecords.fromrecords
-    Creates a MaskedRecords from a list of records.
-numpy.lib.recfunctions.join_by
-    Join arrays `r1` and `r2` on key `key`.
-numpy.ma.mrecords.MaskedRecords
-    Attributes
-numpy.lib.recfunctions.drop_fields
-    Return a new array with fields in `drop_names` dropped.
-numpy.lib.recfunctions.append_fields
-    Add new fields to an existing array.
-numpy.lib.recfunctions.find_duplicates
-    Find the duplicates in a structured array along a given key
-numpy.average
-    Compute the weighted average along the specified axis.
-numpy.ma.mrecords.MaskedRecords.tolist
-    Return the data portion of the array as a list.
-numpy.genfromtxt
-    Load data from a text file, with missing values handled as specified.
-numpy.ma.all
-    Returns True if all elements evaluate to True.
-numpy.ma.any
-    Returns True if any of the elements of `a` evaluate to True.
-numpy.ma.cov
-    Estimate the covariance matrix.
-numpy.ma.max
-    Return the maximum along a given axis.
-numpy.ma.min
-    Return the minimum along a given axis.
-numpy.ma.ptp
-    Return (maximum - minimum) along the given dimension
-numpy.ma.anom
-    Compute the anomalies (deviations from the arithmetic mean)
-numpy.ma.loads
-    Load a pickle from the current string.
-numpy.ma.outer
-    Compute the outer product of two vectors.
-numpy.ma.ravel
-    Returns a 1D version of self, as a view.
-numpy.ma.vander
-    Generate a Vandermonde matrix.
-numpy.ma.is_mask
-    Return True if m is a valid, standard mask.
-numpy.ma.mask_or
-    Combine two masks with the ``logical_or`` operator.
-numpy.ma.polyfit
-    Least squares polynomial fit.
-numpy.ma.compress
-    Return `a` where condition is ``True``.
-numpy.ma.convolve
-    Returns the discrete, linear convolution of two one-dimensional sequences.
-numpy.ma.corrcoef
-    Return Pearson product-moment correlation coefficients.
-numpy.ma.correlate
-    Cross-correlation of two 1-dimensional sequences.
-numpy.ma.harden_mask
-    harden_mask(self)
-numpy.ma.soften_mask
-    soften_mask(self)
-numpy.ma.apply_over_axes
-    Apply a function repeatedly over multiple axes.
-numpy.ma.maximum_fill_value
-    Return the minimum value that can be represented by the dtype of an object.
-numpy.ma.minimum_fill_value
-    Return the maximum value that can be represented by the dtype of an object.
-numpy.ma.MaskedArray.max
-    Return the maximum along a given axis.
-numpy.ma.MaskedArray.min
-    Return the minimum along a given axis.
-numpy.ma.MaskedArray.ptp
-    Return (maximum - minimum) along the given dimension
-numpy.ma.MaskedArray.put
-    Set storage-indexed locations to corresponding values.
-numpy.ma.MaskedArray.anom
-    Compute the anomalies (deviations from the arithmetic mean)
-numpy.ma.MaskedArray.ravel
-    Returns a 1D version of self, as a view.
-numpy.ma.MaskedArray.resize
-    .. warning::
-numpy.ma.MaskedArray.iscontiguous
-    Return a boolean indicating whether the data is contiguous.</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<p>&lt;font color='red' size = '5'&gt; Student Exercise &lt;/font&gt;</p>
+<p><font color='red' size = '5'> Student Exercise </font></p>
 <p>In the empty <strong>Code</strong> cell below, first create a one-dimensional NumPy array of the even integers from 20 to 42, inclusive. Next, apply a ufunc to compute the fourth power of each element in this array. Divide each element in this array by 11, and print out the resulting elements, one element per line.</p>
 <hr>
 
@@ -13341,15 +14312,13 @@ numpy.ma.MaskedArray.iscontiguous
 <div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="Ancillary-Information">Ancillary Information<a class="anchor-link" href="#Ancillary-Information">&#182;</a></h2><p>The following links are to additional documentation that you might find helpful in learning this material. Reading these web-accessible documents is completely optional.</p>
@@ -13365,10 +14334,8 @@ numpy.ma.MaskedArray.iscontiguous
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>&copy; 2017: Robert J. Brunner at the University of Illinois.</strong></p>
 <p>This notebook is released under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">Creative Commons license CC BY-NC-SA 4.0</a>. Any reproduction, adaptation, distribution, dissemination or making available of this notebook for commercial use is not allowed unless authorized in writing by the copyright holder.</p>
@@ -13379,4 +14346,8 @@ numpy.ma.MaskedArray.iscontiguous
     </div>
   </div>
 </body>
+
+ 
+
+
 </html>
