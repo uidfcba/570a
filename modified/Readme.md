@@ -63,11 +63,11 @@
 
 -----
 
-[m1]: Module1/index.html
-[m2]: Module2/index.html
-[m3]: Module3/index.html
-[m4]: Module4/index.html
-[m5]: Module5/index.html
-[m6]: Module6/index.html
-[m7]: Module7/index.html
-[m8]: Module8/index.html
+[m1]: Module1/index.ipynb
+[m2]: Module2/index.ipynb
+[m3]: Module3/index.ipynb
+[m4]: Module4/index.ipynb
+[m5]: Module5/index.ipynb
+[m6]: Module6/index.ipynb
+[m7]: Module7/index.ipynb
+[m8]: Module8/index.ipynb
